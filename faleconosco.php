@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+            <link rel="manifest" href="/manifest.json">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Fale Conosco</title>
@@ -194,7 +197,7 @@ fieldset {
 
 	<div id="menu" class="body">
 		<ul>
-			<li><a href="home.php">Home</a></li>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="sobre.php">Sobre</a></li>
 		</ul>
 	</div>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+   <head>
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+            <link rel="manifest" href="/manifest.json">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
         <title>Banco de Dados</title>
     </head>
     <style>
@@ -71,7 +75,7 @@
         <form action="" method="POST"><br>
             <input type ="text" name="data" placeholder="mês/ano">
             <input type ="submit" name="submit" value ="Buscar">
-            <input type ="button" name="voltar" value="Voltar" onclick="location.href='index.php';">
+            <input type ="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
         </form>
         </div>
         <?php
@@ -88,11 +92,11 @@
           $timestamp = strtotime($dataAtual);
           $dataFormatada = date('d/m/Y',$timestamp);
           
-          $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";
+          $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%' ORDER BY data";
           
           ?>
     
-        <p> <?php  echo "Data Atual: " . $dataFormatada;?> </p>
+        <p> <?php  echo $dataFormatada;?> </p>
         
           <?php
         }

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+            <link rel="manifest" href="/manifest.json">
+    
     <meta charset="utf-8">
     <title>Sensores</title>
    <!-- <meta http-equiv="refresh" content="2;url=controle.php"> -->
@@ -80,10 +83,10 @@
         <div class="nav-wrapper">
           <a class="brand-logo center">Sensores</a>
            <a class="brandlogo">
-               <input type="button" value="Voltar" onclick="location.href='index.php';"></a>
+               <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
           <a> <?php 
           echo"&nbsp &nbsp";
-          echo " Data Atual: " . $dataFormatada;?></a>     
+          echo $dataFormatada;?></a>     
           </p>
         </div>
       </nav>

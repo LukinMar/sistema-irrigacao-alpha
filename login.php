@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<head>
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+            <link rel="manifest" href="/manifest.json">
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
         <title>Login</title>
         <style>
             		.body {
@@ -130,12 +133,12 @@
            
            if($nivel == 1){
                $_SESSION['nacesso'] = $nome;
-                echo '<script type="text/javascript">window.location = "index.php"</script>';
+                echo '<script type="text/javascript">window.location = "home.php"</script>';
                
            }else{
                $_SESSION['normal'] = $nome;  
            }
-              echo '<script type="text/javascript">window.location = "index.php"</script>';
+              echo '<script type="text/javascript">window.location = "home.php"</script>';
        }
        }else{ 
            
