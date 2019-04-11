@@ -8,8 +8,6 @@ $result = mysqli_query($connect, $query);
 $rows = array();
 $table = array();
 
-$objDate = DateTime::createFromFormat('Y-m-d H:i:s', $datatime);
-
 $table['cols'] = array(
  array(
   'label' => 'Horário', 

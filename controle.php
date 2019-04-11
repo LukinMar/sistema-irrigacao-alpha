@@ -150,6 +150,7 @@
             </div>
           </div>
         </div>
+        <input type="button" value="Gráfico" class="waves-effect waves-light btn col s12" id="" onclick="location.href='grafico.php'">
         </div>
       </div>
 </form>
