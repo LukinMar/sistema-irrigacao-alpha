@@ -14,7 +14,7 @@ $table['cols'] = array(
   'type' => 'datetime'
  ),
  array(
-  'label' => 'Temperature (°C)', 
+  'label' => 'Temperatura (°C)', 
   'type' => 'number'
  ),
   array(
@@ -91,6 +91,7 @@ $jsonTable = json_encode($table);
    <br />
    <h2 align="center"></h2>
    <div id="line_chart" style="width: 100%; height: 500px"></div>
+               <input type="button" value="Voltar" onclick="location.href='controle.php';">
   </div>
  </body>
 </html>

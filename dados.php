@@ -4,7 +4,7 @@
             <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
             <link rel="manifest" href="/manifest.json">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta charset="utf-8">
         <title>Banco de Dados</title>
     </head>
@@ -15,9 +15,11 @@
          background-color:#40E0D0;
         }
         .container{
-            margin: 0 auto;
-            width: 50%;
-            background-color:#40E0D0;
+         margin: 0 auto;
+         background-color:#40E0D0;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center
         }
         
         .form{
@@ -86,8 +88,10 @@
           $dataArray = explode("/",$dataPesquisa);
           $dataPesquisa =$dataArray [1] . "-" . $dataArray [0];         
           //echo "Data da Pesquisa: " . $dataPesquisa;
-          $query = "SELECT * FROM dados WHERE data LIKE '%".$dataPesquisa."%'"; // LIKE 
-        } else {
+         $query = "SELECT * FROM dados WHERE data LIKE '%".$dataPesquisa."%'"; // LIKE 
+        } else if($dataPesquisa =""){
+            $query = "SELECI * FROM dados ORDER BY data";
+        }else {
           $dataAtual = date('Y-m-d');
           $timestamp = strtotime($dataAtual);
           $dataFormatada = date('d/m/Y',$timestamp);

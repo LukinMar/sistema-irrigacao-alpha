@@ -6,14 +6,15 @@
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
             <meta name="theme-color" content="#ffffff">
-		<title>Sistema Irrigacação</title>
-		<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="assets/css/sistema.css" />
+            <title>Sistema Irrigacação</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+            <link rel="stylesheet" href="assets/css/sistema.css" />
 	</head>
 	<body class="landing">
 
 		<!-- Header -->
+                <div>
 			<header id="header" class="alt">
                             <h1><strong><a>LukinMar</a></strong> Solutions</h1>
 				<nav id="nav">
@@ -24,7 +25,7 @@
 					</ul>
 				</nav>
 			</header>
-
+                </div>
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 		<!-- Banner -->
