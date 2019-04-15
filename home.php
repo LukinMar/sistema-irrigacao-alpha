@@ -1,12 +1,14 @@
+    <?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html> 
     <head>
             <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
             <link rel="manifest" href="/manifest.json">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sistema Irrigação</title>
 	<style>
@@ -14,6 +16,11 @@
 		body {
 			padding:0px;
 			margin:0px;
+                        background-image: url(images/home.png);
+                        background-position:center;
+                        background-color:#26a69a;
+                        background-attachment:fixed;
+                        background-repeat: no-repeat;
 		}
                 
 		#menu ul {
@@ -23,7 +30,7 @@
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-                    background-color:#00CED1;
+                    background-color:#26a69a;
 
 		}
  
@@ -32,18 +39,18 @@
                 }
  
 		#menu ul li a {
-			background-color:#00CED1;
+			background-color:#26a69a;
 			color: #fff;
 			text-decoration: none;
-			border-bottom:1px solid #40E0D0;
+			border-bottom:1px solid #2bbbad;
 			padding: 2px 10px;
 			float:left;
 		}
  
 		#menu ul li a:hover {
-			background-color:#40E0D0;
+			background-color:#2bbbad;
 			color: #6D6D6D;
-			border-bottom:1px solid #00CED1;
+			border-bottom:1px solid #26a69a;
 		}
 	</style>
 </head>
@@ -62,17 +69,8 @@
 		</ul>
 	</div>
     </div>
+    <div>
+        <p></p>
+    </div>
 </body>
 </html>
-
-    <?php
-    session_start();
-    
-    if (isset($_SESSION ['nacesso'])){
-       echo 'Bem-vindo, '.$_SESSION['nacesso']. ' - ADMINISTRADOR ';
-    }else if(isset($_SESSION['normal'])){
-       echo 'Bem-vindo, '.$_SESSION['normal'].'';
-    } else {
-        echo '<script type="text/javascript">window.location = "login.php"</script>';
-    }
-    ?>

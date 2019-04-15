@@ -1,18 +1,29 @@
+
+<?php
+        date_default_timezone_set('America/Sao_Paulo');
+        $dataAtual = date('Y-m-d'); 
+        $timestamp = strtotime($dataAtual);
+        $dataFormatada = date('d/m/Y',$timestamp);
+?>
 <!DOCTYPE html>
 <html>
 <head>
-            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
-            <link rel="manifest" href="/manifest.json">
-    
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
     <meta charset="utf-8">
     <title>Sensores</title>
-   <!-- <meta http-equiv="refresh" content="2;url=controle.php"> -->
+    <meta http-equiv="refresh" content="60;url=controle.php">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+   <link rel="stylesheet" href="assets/css/materialize.css" />
+   <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
+    
     <style>
       body{
         background-color: #E0E0E0;
+      }
+      .loading{
+          
       }
       nav .brandlogo {
     position: absolute;
@@ -21,13 +32,15 @@
     right: 0.5rem;
     left: auto;
     padding: 0;
+     z-index:1000;
   
 }
           input[type=button]{
-         background-color:  #00CED1;
+         background-color:  #26a69a;
          cursor:pointer;
          border-radius: 5px;
          border-style:none;
+         color:#fff;
       }
 
       .content {
@@ -35,7 +48,7 @@
       }
 
       nav {
-        background-color: #00CED1;
+        background-color: #26a69a;
       }
 
       .statistic {
@@ -56,20 +69,95 @@
           font-size: 5em;
         }
       }
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
+  margin: 0 auto;
+  top: 750px; /*CONTROLE AQUI A DISTANCIA*/
+  display:block;
+}
+
+.spinner > div {
+    
+  background-color: #2bbbad;;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+  
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
 
     </style>
   </head>
   <body>
+  <form action="http://192.168.1.125" method="GET">
+
+      <div class="navbar-fixed">
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a class="brand-logo center">Sensores</a>
+           <a class="brandlogo">
+               <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
+                    <a> <?php 
+          echo"&nbsp &nbsp";
+          echo $dataFormatada;?></a>     
+          </p>
+        </div>
+      </nav>
+    </div>
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
              <?php
         include ('conexao.php');
-        
-        date_default_timezone_set('America/Sao_Paulo');
-          $dataAtual = date('Y-m-d'); // mostra no mesmo segundo
-          $timestamp = strtotime($dataAtual);
-          $dataFormatada = date('d/m/Y',$timestamp);
 
-          $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";
-          
+        $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";
+        
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
@@ -77,28 +165,14 @@
             $timestamp = strtotime($linha->data);
 
 ?>
-<form method="GET">
-    <div class="navbar-fixed">
-      <nav class="nav-extended">
-        <div class="nav-wrapper">
-          <a class="brand-logo center">Sensores</a>
-           <a class="brandlogo">
-               <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
-          <a> <?php 
-          echo"&nbsp &nbsp";
-          echo $dataFormatada;?></a>     
-          </p>
-        </div>
-      </nav>
-    </div>
            <!--    TEMPERATURA    -->
-    <div class="container content">
+    <div class="container content" style="z-index:1000;">
       <br/>
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
-              <span class="statistic"> <?php echo $linha->temp; ?></span>
+              <span class="statistic"> <?php echo ($linha->temp*100/100); ?></span>
               <span class="statistic">ºC</span>
             </div>
             <div class="card-content">
@@ -110,7 +184,7 @@
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
-              <span class="statistic"><?php echo $linha->ur; ?></span>
+              <span class="statistic"><?php echo ($linha->ur*100/100); ?></span>
               <span class="statistic">%</span>
             </div>
             <div class="card-content">
@@ -134,8 +208,7 @@
               </span>
             </div>
           </div>
-        </div>
-        <!-- ATIVAÇÃO RELE -->
+        </div>        <!-- ATIVAÇÃO RELE -->
         <div class="col s12 m6">
           <div class="card" style="padding-bottom:40px">
             <div class="card-image center">
@@ -145,15 +218,22 @@
               <span class="card-title grey-text text-darken-4">
                 Rega Manual
               </span>
-                <input type="button" value="Ligar" class="waves-effect waves-light btn col s12" id="btn-lamp" class="material-icons left"onclick="window.location.href='/ligar'">
+                <a class="waves-effect waves-light btn col s12" id="btn-lamp" name="botão" value="Ativar">
+                <i class="material-icons left">flash_on</i> Ativar
               </a>
             </div>
           </div>
         </div>
-        <input type="button" value="Gráfico" class="waves-effect waves-light btn col s12" id="" onclick="location.href='grafico.php'">
+                <a class="waves-effect waves-light btn col s12" id="btn-lamp"onclick="location.href='grafico.php'">
+                <i class="material-icons left">show_chart</i> Gráfico
+              </a>
         </div>
+    </div>
+    </div>
       </div>
 </form>
+  
+   
   </body>
 </html>
 <?php

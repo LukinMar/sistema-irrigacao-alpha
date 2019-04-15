@@ -29,7 +29,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #00CED1;
+  background: #26a69a;
 }
 
 .container {
@@ -110,7 +110,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #00CED1;
+  background: #26a69a;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
@@ -118,7 +118,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: #40E0D0;
+  background: #2bbbad;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -167,7 +167,7 @@ fieldset {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-                    background-color:#00CED1;
+                    background-color:#26a69a;
 
 		}
  
@@ -176,18 +176,18 @@ fieldset {
                 }
  
 		#menu ul li a {
-			background-color:#00CED1;
+			background-color:#26a69a;
 			color: #fff;
 			text-decoration: none;
-			border-bottom:1px solid #40E0D0;
+			border-bottom:1px solid #2bbbad;
 			padding: 2px 10px;
 			float:left;
 		}
  
 		#menu ul li a:hover {
-			background-color:#40E0D0;
+			background-color:#2bbbad;
 			color: #6D6D6D;
-			border-bottom:1px solid #00CED1;
+			border-bottom:1px solid #26a69a;
 		}
 </style>
 <body>

@@ -12,11 +12,11 @@
         
         .body{
           align-items:center;
-         background-color:#40E0D0;
+         background-color:#2bbbad;
         }
         .container{
          margin: 0 auto;
-         background-color:#40E0D0;
+         background-color:#2bbbad;
          flex-direction: row;
          justify-content: center;
          align-items: center
@@ -41,7 +41,7 @@
         input[type=submit]{
             width:60px;
             color:#fff;
-            background-color:#00CED1;
+            background-color:#26a69a;
             cursor:pointer;
         }
         table{
@@ -53,7 +53,7 @@
         }
         
          input[type=button]{
-         background-color:  #40E0D0;
+         background-color:  #2bbbad;
          cursor:pointer;
          border-radius: 5px;
          border-style:none;
@@ -67,7 +67,7 @@
       }
         table th{
             height:30px;
-            background-color:#00CED1;
+            background-color:#26a69a;
             color:#fff;
         }
     </style>
@@ -82,26 +82,25 @@
         </div>
         <?php
         include ('conexao.php');
+        
         date_default_timezone_set('America/Sao_Paulo');
+            
         if($_SERVER['REQUEST_METHOD'] == "POST"){
           $dataPesquisa = $_POST['data'];
           $dataArray = explode("/",$dataPesquisa);
-          $dataPesquisa =$dataArray [1] . "-" . $dataArray [0];         
+          $dataPesquisa = $dataArray [1] . "-" . $dataArray [0];         
           //echo "Data da Pesquisa: " . $dataPesquisa;
-         $query = "SELECT * FROM dados WHERE data LIKE '%".$dataPesquisa."%'"; // LIKE 
-        } else if($dataPesquisa =""){
-            $query = "SELECI * FROM dados ORDER BY data";
+         $query = "SELECT * FROM dados WHERE data LIKE '%".$dataPesquisa."%' ORDER BY data"; // LIKE 
         }else {
           $dataAtual = date('Y-m-d');
           $timestamp = strtotime($dataAtual);
           $dataFormatada = date('d/m/Y',$timestamp);
           
           $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%' ORDER BY data";
-          
           ?>
     
-        <p> <?php  echo $dataFormatada;?> </p>
-        
+        <p> <?php   echo $dataFormatada;?>
+                </p>
           <?php
         }
         $stmt = $pdo->prepare($query);
@@ -119,9 +118,9 @@
             $timestamp = strtotime($linha->data);
             $dataTabela = date('d/m/Y H:i:s',$timestamp);
             echo "<tr>";
-            echo "<td>".$linha->temp."</td>";
-            echo "<td>".$linha->ur."</td>";   
-            echo "<td>".$linha->us."</td>";   
+            echo "<td>".($linha->temp*100/100)." ºC</td>";
+            echo "<td>".($linha->ur*100/100)."%</td>";   
+            echo "<td>".$linha->us."%</td>";   
             echo "<td>".$dataTabela."</td>";   
             echo "</tr>";
 }
