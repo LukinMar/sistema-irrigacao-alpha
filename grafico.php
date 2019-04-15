@@ -1,6 +1,6 @@
 <?php
 //index.php
-$connect = mysqli_connect("localhost", "root", "", "sistemairrigacao");
+$connect = mysqli_connect("ec2-50-19-127-115.compute-1.amazonaws.com", "btitzqmyqfdjfl", "1b76f41706bfe03e2c7a367748d50dfa30513a4583cdd5e29a794a4c5f76a04a", "de8msggjb5bkg");
 $query = '
 SELECT temp, ur, us, UNIX_TIMESTAMP(CONCAT_WS(" ", data)) AS datetime 
 FROM dados ORDER BY data';
