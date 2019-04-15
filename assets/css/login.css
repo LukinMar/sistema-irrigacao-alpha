@@ -33,7 +33,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #00CED1;
+  background: #26a69a;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #40E0D0;
+  background: #2bbbad;
 }
 .form .message {
   margin: 15px 0 0;
@@ -52,7 +52,7 @@
   font-size: 12px;
 }
 .form .message a {
-  color: #00CED1;
+  color: #26a69a;
   text-decoration: none;
 }
 .form .register-form {
@@ -101,7 +101,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;       
   color: #777;
-  background: #00CED1; 
+  background: #26a69a; 
 }
 
        .body {
@@ -110,7 +110,7 @@ body {
 		}
             
             #body{
-                background-color:#00CED1;
+                background-color:#26a69a;
             }            
 
 
@@ -118,7 +118,7 @@ body {
             input[type=submit]{
             width:20%;
             color:#fff;
-            background-color:#00CED1;
+            background-color:#26a69a;
             cursor:pointer;
             border-radius: 5px;
             }
@@ -129,7 +129,7 @@ body {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
-                    background-color:#00CED1;
+                    background-color:#26a69a;
 
 		}
  
@@ -138,19 +138,19 @@ body {
                 }
  
 		#menu ul li a {
-			background-color:#00CED1;
+			background-color:#26a69a;
 			color: #fff;
 			text-decoration: none;
-			border-bottom:1px solid #40E0D0;
+			border-bottom:1px solid #2bbbad;
 			padding: 2px 10px;
 			float:left;
 		}
  
 		#menu ul li a:hover {
                      font-family: "Roboto", sans-serif;
-			background-color:#40E0D0;
+			background-color:#2bbbad;
 			color: #6D6D6D;
-			border-bottom:1px solid #00CED1;
+			border-bottom:1px solid #26a69a;
 		}
                 
                 
