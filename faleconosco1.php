@@ -6,10 +6,11 @@
     $comercial = filter_input (INPUT_POST, 'comercial', FILTER_SANITIZE_STRING);
     $mensagem = filter_input (INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
     
- $servidor = "localhost";
- $usuario = "root";
- $senha = "";
- $dbname = "sistemairrigacao";
+ $servidor = "ec2-50-19-127-115.compute-1.amazonaws.com";
+ $usuario = "btitzqmyqfdjfl";
+ $senha = "
+1b76f41706bfe03e2c7a367748d50dfa30513a4583cdd5e29a794a4c5f76a04a";
+ $dbname = "de8msggjb5bkg";
      
     $link = mysqli_connect($servidor, $usuario, $senha, $dbname);
     $query_select = "SELECT email FROM contato WHERE email = '$email'";
