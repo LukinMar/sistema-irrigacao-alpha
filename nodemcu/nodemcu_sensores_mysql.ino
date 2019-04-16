@@ -1,4 +1,5 @@
 #include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #include "DHT.h"  
@@ -28,8 +29,6 @@ const int tempoRega = 5;// Tempo de rega em segundos
 
 int umidadeSolo = 0;
 
-HTTPClient http;
-
 DHT dht(pino_dht, DHT11); // define o pino e o tipo de DHT
 LiquidCrystal_I2C lcd(0x27,16,2);
 
@@ -45,16 +44,19 @@ void setup() {
   lcd.setCursor(0, 1);
   lcd.print("    Solutions   ");
   delay(2000);
+  
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("     Sistema    "); //Escreve o texto na primeira linha do display LCD
   lcd.setCursor(0, 1); //Seta a posição em que o cursos recebe o texto a ser mostrado (Linha2)   
   lcd.print("    Irrigacao   "); //Escreve o texto na segunda linha do display LCD
   delay(2000);
+  
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print(" Conectando... ");
   delay(2000);
+ 
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("      Wifi     ");
@@ -101,7 +103,7 @@ void loop() {
   Serial.print(':');
   Serial.println(port);
 
-  // Use WiFiClient class to create TCP connections
+  // Use  class to create TCP connections
   WiFiClient client;
   if (!client.connect(host, port)) {
     Serial.println("Falha na conexão");
@@ -111,14 +113,16 @@ void loop() {
     delay(5000);
     return;
   }
-
+    
     telaEspera();
+  
   
   delay(40000);
   temperatura = dht.readTemperature(); // Lê a temperatura em Celsius
   umidade = dht.readHumidity(); // Lê a umidade
   umidadeSolo = analogRead(pinoSensor);// Lê a umidade do solo
   umidadeSolo = map(umidadeSolo, 1023, 0, 0, 100); // Converte a variação do sensor de 0 a 1023 para 0 a 100
+
 
   /* PROVISÓRIO  
 // Se ocorreu alguma falha durante a leitura
@@ -152,6 +156,7 @@ void loop() {
     lcd.print(umidadeSolo);
     lcd.print("%  ");
   //}
+
   
     //Rega automática
   if(umidadeSolo < limiarSeco) {
@@ -170,27 +175,33 @@ void loop() {
    }
 
    telaEspera();
-
+/*/
    //Rega manual
-    srv:listen(80, function(conn))
-    conn:on("receive",function(client,payload)
-    Serial.print(payload);
+  // Lê caracteres do buffer serial
+  String req = client.readStringUntil('\r');
+  Serial.println(req);
+  client.flush();
 
-        // Verifica se a requisição recebida contém a expressão "botao=Ativar"
-        if string.match(payload, "botao=Ativar") {
-            if (estado == DESLIGADO) {
-            estado = LIGADO;
-            digitalWrite (pinoRele, HIGH);
-            lcd.clear();
-            lcd.setCursor(0, 0);
-            lcd.print("   Irrigando   "); 
-            Serial.println("   Irrigando   m");
-            delay(tempoRega*1000);    // Espera o tempo estipulado
-            digitalWrite(pinoRele, LOW);
-            estado = DESLIGADO;
-            lcd.clear();
+  
+  // Verifica se existe a substring rele_on
+  if (req.indexOf("rele_on") != -1) {
+    //Rega automática
+  if(umidadeSolo < limiarSeco) {
+     if (estado == DESLIGADO) {
+      estado = LIGADO;
+      digitalWrite (pinoRele, HIGH);
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("   Irrigando   ");
+      Serial.println("   Irrigando   "); 
+      delay(tempoRega*1000);    // Espera o tempo estipulado
+      digitalWrite(pinoRele, LOW);
+      estado = DESLIGADO;
+      lcd.clear();
     }
-        }
+   }
+  }
+        /*/
         
   lcd.home(); // Seta o cursor para o inicio caracter 0, na linha 0
   delay(100);
@@ -239,7 +250,6 @@ void loop() {
     }
   }
   // Close the connection
-  Serial.println();
   Serial.println("Conexao fechada");
   client.stop();
 
