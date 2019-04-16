@@ -12,7 +12,7 @@
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
             <meta name="theme-color" content="#ffffff">
-            <title>Sistema Irrigacação</title>
+            <title>Sistema Irrigação</title>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
             <link rel="stylesheet" href="assets/css/sistema.css" />
