@@ -1,6 +1,6 @@
 <?php
 //index.php
-$connect = mysqli_connect("ec2-50-19-127-115.compute-1.amazonaws.com", "btitzqmyqfdjfl", "1b76f41706bfe03e2c7a367748d50dfa30513a4583cdd5e29a794a4c5f76a04a", "de8msggjb5bkg");
+$connect = mysqli_connect("localhost", "root", "", "sistemairrigacao");
 $query = '
 SELECT temp, ur, us, UNIX_TIMESTAMP(CONCAT_WS(" ", data)) AS datetime 
 FROM dados ORDER BY data';
@@ -56,6 +56,7 @@ $jsonTable = json_encode($table);
 
 <html>
  <head>
+     <title> Gráfico dos Sensores </title>
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
   <meta http-equiv="refresh" content="60;url=grafico.php">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  

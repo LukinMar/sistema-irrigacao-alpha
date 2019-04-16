@@ -18,9 +18,10 @@
 			margin:0px;
                         background-image: url(images/home.png);
                         background-position:center;
-                        background-color:#26a69a;
+                        background-color:#2bbbad;
                         background-attachment:fixed;
                         background-repeat: no-repeat;
+                        background-size: cover;
 		}
                 
 		#menu ul {

@@ -88,7 +88,11 @@
         if($_SERVER['REQUEST_METHOD'] == "POST"){
           $dataPesquisa = $_POST['data'];
           $dataArray = explode("/",$dataPesquisa);
-          $dataPesquisa = $dataArray [1] . "-" . $dataArray [0];         
+          if($dataPesquisa == null) {
+              $dataPesquisa = $dataArray [0] . "-" . $dataArray [0];  
+          } else {
+              $dataPesquisa = $dataArray [1] . "-" . $dataArray [0];         
+          }
           //echo "Data da Pesquisa: " . $dataPesquisa;
          $query = "SELECT * FROM dados WHERE data LIKE '%".$dataPesquisa."%' ORDER BY data"; // LIKE 
         }else {

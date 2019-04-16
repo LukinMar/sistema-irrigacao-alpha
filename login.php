@@ -42,10 +42,10 @@
 
 <?php
 
-         $servidor = "ec2-50-19-127-115.compute-1.amazonaws.com";
-         $logindb = "btitzqmyqfdjfl";
-         $passdb = "1b76f41706bfe03e2c7a367748d50dfa30513a4583cdd5e29a794a4c5f76a04a";
-         $dbname = "de8msggjb5bkg";      
+         $servidor = "localhost";
+         $logindb = "root";
+         $passdb = "";
+         $dbname = "sistemairrigacao";      
 
 $link = mysqli_connect($servidor, $logindb, $passdb, $dbname);
     function get_post_action($name)

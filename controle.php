@@ -9,7 +9,6 @@
 <html>
 <head>
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
-    <link rel="manifest" href="/manifest.json">
     <meta charset="utf-8">
     <title>Sensores</title>
     <meta http-equiv="refresh" content="60;url=controle.php">
@@ -17,7 +16,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/materialize.css" />
    <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
-    
+    <script>
+		// Realiza um disparo via Ajax para o endereço do meu NodeMcu
+	    var rele_controle = function(status) {
+	        var xmlhttp = new XMLHttpRequest();
+	        var set_status = "http://192.168.1.125/?function=" + status;
+	        xmlhttp.open("GET", set_status);
+	        xmlhttp.send();
+	    }
+        
+           // Acessa os botões e passando as nossas diretivas de ligar ou desligar o led 
+	    var rele = function() {
+	    	var ligar = document.querySelector(".ligar");
+	    	    ligar.onclick = function() {
+	    	    	led_controle("rele_on");
+	    	    }
+	    }
+	</script>
+    </script>
     <style>
       body{
         background-color: #E0E0E0;
@@ -131,7 +147,7 @@
     </style>
   </head>
   <body>
-  <form action="http://192.168.1.125" method="GET">
+  <form method="GET">
 
       <div class="navbar-fixed">
       <nav class="nav-extended">
@@ -146,14 +162,17 @@
         </div>
       </nav>
     </div>
-<div class="spinner">
+      
+<div id="spi" class="spinner">
   <div class="rect1"></div>
   <div class="rect2"></div>
   <div class="rect3"></div>
   <div class="rect4"></div>
   <div class="rect5"></div>
 </div>
-             <?php
+      
+<!--
+            <?php
         include ('conexao.php');
 
         $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";
@@ -165,6 +184,8 @@
             $timestamp = strtotime($linha->data);
 
 ?>
+      
+
            <!--    TEMPERATURA    -->
     <div class="container content" style="z-index:1000;">
       <br/>
@@ -218,7 +239,7 @@
               <span class="card-title grey-text text-darken-4">
                 Rega Manual
               </span>
-                <a class="waves-effect waves-light btn col s12" id="btn-lamp" name="botão" value="Ativar">
+                <a class="waves-effect waves-light btn col s12" class="buttons ativar" id="btn-lamp">
                 <i class="material-icons left">flash_on</i> Ativar
               </a>
             </div>
@@ -232,7 +253,7 @@
     </div>
       </div>
 </form>
-  
+
    
   </body>
 </html>
