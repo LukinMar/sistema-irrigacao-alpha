@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Abr-2019 às 19:04
+-- Generation Time: 16-Abr-2019 às 22:13
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `sistemairrigacao`
 --
+CREATE DATABASE IF NOT EXISTS `sistemairrigacao` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `sistemairrigacao`;
 
 -- --------------------------------------------------------
 
@@ -89,9 +91,8 @@ INSERT INTO `dados` (`id`, `temp`, `ur`, `us`, `data`) VALUES
 (22, '28.90', '68.00', '59', '2019-04-14 06:33:31'),
 (23, '29.00', '70.00', '59', '2019-04-14 06:34:32'),
 (24, '28.20', '71.00', '59', '2019-04-14 06:35:32'),
-(25, '27.90', '71.00', '60', '2019-04-14 06:36:32'),
-(26, '15', '50', '75', '2019-04-15 16:27:37'),
-(27, '15', '50', '75', '2019-04-15 16:28:10');
+(25, '27.90', '71.00', '60', '2019-04-15 06:36:32'),
+(85, '15', '50', '75', '2019-04-16 03:15:11');
 
 -- --------------------------------------------------------
 
@@ -150,7 +151,7 @@ ALTER TABLE `contato`
 -- AUTO_INCREMENT for table `dados`
 --
 ALTER TABLE `dados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
