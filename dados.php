@@ -18,11 +18,11 @@
         
         .body{
           align-items:center;
-         background-color:#2bbbad;
+         background-color:#26a69a;
         }
         .container{
          margin: 0 auto;
-         background-color:#2bbbad;
+         background-color:#26a69a;
          flex-direction: row;
          justify-content: center;
          align-items: center
@@ -47,7 +47,8 @@
         input[type=submit]{
             width:60px;
             color:#fff;
-            background-color:#26a69a;
+            border-radius: 5px;
+            background-color:#2bbbad;
             cursor:pointer;
         }
         table{
@@ -62,18 +63,24 @@
          background-color:  #2bbbad;
          cursor:pointer;
          border-radius: 5px;
-         border-style:none;
          color:#fff;
-          right: 0.5rem;
-          left: auto;
+         right: 0.5rem;
+         left: auto;
       }
-
+      input[type=button]:hover{
+          color: #6D6D6D;
+      }
+      
+      input[type=submit]:hover{
+      color: #6D6D6D;
+      }
+     
       p{
           color:#fff;
       }
         table th{
             height:30px;
-            background-color:#26a69a;
+            background-color:#2bbbad;
             color:#fff;
         }
     </style>
