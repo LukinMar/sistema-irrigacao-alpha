@@ -2163,6 +2163,8 @@ html {
  */
 body {
   margin: 0;
+   background-color: #E0E0E0;
+  
 }
 
 /**
@@ -9083,3 +9085,116 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+
+
+       body{
+        background-color: #E0E0E0;
+      }
+      .loading{
+          
+      }
+      nav .brandlogo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    right: 0.5rem;
+    left: auto;
+    padding: 0;
+     z-index:1000;
+  
+}
+          input[type=button]{
+         background-color:  #26a69a;
+         cursor:pointer;
+         border-radius: 5px;
+         border-style:none;
+         color:#fff;
+      }
+
+      .content {
+        margin-top: 30px;
+      }
+
+      nav {
+        background-color: #26a69a;
+      }
+
+      .statistic {
+        font-size: 8em;
+        margin-top: 15px !important;
+      }
+
+      .card {
+        min-height: 250px;
+      }
+
+      .activator {
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 600px){
+        .statistic {
+          font-size: 5em;
+        }
+      }
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
+  margin: 0 auto;
+  top: 750px; /*CONTROLE AQUI A DISTANCIA*/
+  display:block;
+}
+
+.spinner > div {
+    
+  background-color: #2bbbad;;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+  
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+      input[type=button]:hover{
+          color: #6D6D6D;
+      }
