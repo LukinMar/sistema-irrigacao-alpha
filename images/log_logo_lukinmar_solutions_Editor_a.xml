@@ -1,0 +1,51 @@
+<batchrender>
+  <environmentinfo>
+    <machineinfo>
+      <machinename>LUKINMAR</machinename>
+      <username>LukinMar</username>
+      <processortype>GenuineIntel, stepping 10, model 14, instruction family 6</processortype>
+      <processorname>Intel Core i5-8400 CPU</processorname>
+      <processornumber>6</processornumber>
+      <ostype>WINDOWS 64 BIT</ostype>
+      <osversion>Windows 10, 64 Bit, Professional Edition (build 17763)</osversion>
+      <oglvendorname>NVIDIA Corporation</oglvendorname>
+      <oglrendername>GeForce GTX 1060 6GB/PCIe/SSE2</oglrendername>
+      <oglversion>4.6.0 NVIDIA 425.31</oglversion>
+    </machineinfo>
+    <c4dinfo>
+      <c4dversion>19024</c4dversion>
+      <c4dplugins>browser io_obj mkmodeler xtensions addons advanced render alembic archigrass bitmapfilter bpexchange ca ca2 cineman clothilde collada14 collada15 colorchoosergui compositing dwg dwgobjects dynamics exchanges expressiontag fbx gpurenderer hair houdiniconfig houdiniengine iges i_skp licenseserver metrics mocca model mograph motioncam motiontracker newman objects okino onlinehelp onlineupdater python relaxuv sculpt sculptbrushes shader sketch sky sla spacemouse substance teamrender texturemanager thinking particles tpoperators walkthrough xpressocore </c4dplugins>
+    </c4dinfo>
+  </environmentinfo>
+  <fileinfo>
+    <filename>logo_lukinmar_solutions.ai</filename>
+    <filepath>D:\xampp\htdocs\sistemairrigacao\images</filepath>
+    <renderdatainfo>
+      <rendersettings>My Render Setting</rendersettings>
+      <take>Main</take>
+      <camera>Default Camera</camera>
+      <width>1280</width>
+      <height>720</height>
+      <filmaspect>1.778</filmaspect>
+      <pixelaspect>1</pixelaspect>
+      <fps>30</fps>
+      <from>0</from>
+      <to>0</to>
+      <steps>1</steps>
+      <saveinfo>
+        <imagepath>D:\xampp\htdocs\sistemairrigacao\images</imagepath>
+        <imagedepth>8</imagedepth>
+        <imageformat>TIFF</imageformat>
+      </saveinfo>
+    </renderdatainfo>
+  </fileinfo>
+  <renderinfo>
+    <imageinfo frame="0">00:00:00 D:\xampp\htdocs\sistemairrigacao\images\logo_lukinmar_solutions_Editor_a.tif</imageinfo>
+  </renderinfo>
+  <batchinfo>
+    <added>17/04/2019, 21:06:19</added>
+    <started>17/04/2019, 21:06:23</started>
+    <rendertime>00:00:00</rendertime>
+    <result>Finished</result>
+  </batchinfo>
+</batchrender>
