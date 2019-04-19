@@ -20,10 +20,10 @@
          background-image: url(images/home.png);
          background-position:center;
          background-color:#26a69a;
-         -webkit-border-background-size: cover;
-         -moz-border-background-size: cover;
-         -ms-border-background-size:cover;
-         -o-border-background-size:cover;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -ms-background-size:cover;
+         -o-background-size:cover;
          background-size:cover;
         }
         
@@ -32,15 +32,15 @@
          background-image: url(images/homemobile.png);
          background-position:center;
          background-color:#26a69a;
-         -webkit-border-background-size: cover;
-         -moz-border-background-size: cover;
-         -ms-border-background-size:cover;
-         -o-border-background-size:cover;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -ms-background-size:cover;
+         -o-background-size:cover;
          background-size:cover;
          }
 
 </style>
-<body class="img-responsive">
+<body>
         <div class="navbar-fixed">
           <div class="nav-wrapper"></div>
 
