@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
@@ -22,26 +22,25 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="assets/css/materialize.css" />
    <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
-    <script>
-		// Realiza um disparo via Ajax para o endereço do meu NodeMcu
-	    var rele_controle = function(status) {
+   <!--
+  <script>              
+          	var rele_controle = function(status) {
 	        var xmlhttp = new XMLHttpRequest();
 	        var set_status = "http://192.168.1.125/?function=" + status;
 	        xmlhttp.open("GET", set_status);
 	        xmlhttp.send();
-	    }
-        
-           // Acessa os botões e passando as nossas diretivas de ligar ou desligar o led 
-	    var rele = function() {
-	    	var ligar = document.querySelector(".ligar");
-	    	    ligar.onclick = function() {
-	    	    	led_controle("rele_on");
-	    	    }
-	    }
+	    };
+
+               // Registrar função de click no botão de lampada
+                 var btnLamp = document.getElementById('btn-lamp');
+                 btnLamp.onclick = function(){
+                    rele_controle("rele_on");
+                 });
 	</script>
+-->
   </head>
   <body>
-  <form method="GET">
+  <form method="GET" action="192.168.1.25">
 
       <div class="navbar-fixed">
       <nav class="nav-extended">
@@ -57,7 +56,7 @@
       </nav>
     </div>
       
-<div id="spi" class="spinner">
+<div class="spinner">
   <div class="rect1"></div>
   <div class="rect2"></div>
   <div class="rect3"></div>
@@ -133,13 +132,13 @@
               <span class="card-title grey-text text-darken-4">
                 Rega Manual
               </span>
-                <a class="waves-effect waves-light btn col s12" class="buttons ativar" id="btn-lamp">
+                <a class="waves-effect waves-light btn col s12" id="btn-lamp">
                 <i class="material-icons left">flash_on</i> Ativar
               </a>
             </div>
           </div>
         </div>
-                <a class="waves-effect waves-light btn col s12" id="btn-lamp"onclick="location.href='grafico.php'">
+                <a class="waves-effect waves-light btn col s12" onclick="location.href='grafico.php'">
                 <i class="material-icons left">show_chart</i> Gráfico
               </a>
         </div>
@@ -151,6 +150,7 @@
    
   </body>
 </html>
+
 <?php
         }
         ?>

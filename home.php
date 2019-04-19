@@ -7,18 +7,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="images/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/home.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sistema Irrigação</title>
 </head>
 <style>
     body{
          background-image: url(images/home.png);
+	 margin:0px;
+         background-position:center;
+         background-color:#2bbbad;
+         background-attachment:fixed;
+         background-repeat: no-repeat;
+         background-size: cover;
+         -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: auto, auto;
     }                        
 </style>
 <body>
