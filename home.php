@@ -28,6 +28,7 @@
          background-color:#2e4053;
          background-size:cover;
          }
+        }
 
 </style>
 <body>
