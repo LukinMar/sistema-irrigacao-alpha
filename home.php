@@ -4,13 +4,11 @@
 <!DOCTYPE html>
 <html> 
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00aba9" name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="assets/css/home.css"/>
 	<title>Sistema Irrigação</title>
 </head>
@@ -19,23 +17,15 @@
         body{
          background-image: url(images/home.png);
          background-position:center;
-         background-color:#26a69a;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -ms-background-size:cover;
-         -o-background-size:cover;
+         background-color:#2e4053;
          background-size:cover;
         }
         
         @media only screen and (max-device-width: 1100px) {
         body {
          background-image: url(images/homemobile.png);
-         background-position:center;
-         background-color:#26a69a;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -ms-background-size:cover;
-         -o-background-size:cover;
+         background-position:center, center;
+         background-color:#2e4053;
          background-size:cover;
          }
 
@@ -53,9 +43,6 @@
 			<li><a href="sair.php">Sair</a></li>
 		</ul>
 	</div>
-    </div>
-    <div>
-        <p></p>
     </div>
 </body>
 </html>

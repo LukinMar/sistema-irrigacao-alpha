@@ -17,11 +17,11 @@
         
         .body{
           align-items:center;
-         background-color:#26a69a;
+         background-color:#2e4053;
         }
         .container{
          margin: 0 auto;
-         background-color:#26a69a;
+         background-color:#2e4053;
          flex-direction: row;
          justify-content: center;
          align-items: center
@@ -47,7 +47,7 @@
             width:60px;
             color:#fff;
             border-radius: 5px;
-            background-color:#2bbbad;
+            background-color:#3f566e;
             cursor:pointer;
         }
         table{
@@ -59,7 +59,7 @@
         }
         
          input[type=button]{
-         background-color:  #2bbbad;
+         background-color:  #3f566e;
          cursor:pointer;
          border-radius: 5px;
          color:#fff;
@@ -79,7 +79,7 @@
       }
         table th{
             height:30px;
-            background-color:#2bbbad;
+            background-color:#3f566e;
             color:#fff;
         }
     </style>

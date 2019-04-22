@@ -102,7 +102,7 @@ $jsonTable = json_encode($table);
 .btn, .btn-large, .btn-small {
     text-decoration: none;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #2e4053;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
@@ -142,7 +142,7 @@ $jsonTable = json_encode($table);
 .btn, .btn-large, .btn-small {
     text-decoration: none;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #2e4053;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
@@ -263,7 +263,7 @@ i, cite, em, var, address, dfn {
 .btn, .btn-large, .btn-small {
     text-decoration: none;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #2e4053;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
@@ -290,7 +290,7 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 .btn:hover, .btn-large:hover, .btn-small:hover {
-    background-color: #2bbbad;
+    background-color: #3f566e;
 }
   </style>
  </head>  
