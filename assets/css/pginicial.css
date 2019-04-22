@@ -1802,7 +1802,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #26a69a;
+		background-color: #2e4053;
 		border-radius: 4px;
 		color: #ffffff !important;
 		border: 0;
@@ -1823,7 +1823,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #2bbbad;
+			background-color: #3f566e;
 		}
 
 		input[type="submit"]:active,
@@ -1831,7 +1831,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #26a69a;
+			background-color: #2e4053;
 		}
 
 		input[type="submit"].icon,
@@ -1911,7 +1911,7 @@
 			input[type="button"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background-color:#2bbbad;
+				background-color:#3f566e;
 			}
 
 			input[type="submit"].alt:active,
@@ -1919,7 +1919,7 @@
 			input[type="button"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background-color: #26a69a;
+				background-color: #2e4053;
 			}
 
 			input[type="submit"].alt.icon:before,
@@ -1935,7 +1935,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #26a69a;
+			background-color: #2e4053;
 			color: #ffffff !important;
 		}
 
@@ -1944,7 +1944,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color:#2bbbad;
+				background-color:#3f566e;
 			}
 
 			input[type="submit"].special:active,
@@ -1952,7 +1952,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #26a69a;
+				background-color: #2e4053;
 			}
 
 		@media screen and (max-width: 480px) {
