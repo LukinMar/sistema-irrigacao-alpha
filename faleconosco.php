@@ -25,7 +25,7 @@
 	</div>
     </div>
 <div class="container">  
-  <form id="contact" action="faleconosco1" method="post">
+  <form id="contact" action="faleconosco1.php" method="post">
     <h3>Formulário de contato</h3>
     <h4>Nos contacte para orçamentos e dúvidas</h4>
     <fieldset>
@@ -50,40 +50,3 @@
 </div>
 </body>
 </html>
-//
-
-<?php
-/**
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $comercial = $_POST['comercial'];
-    $mensagem = $_POST['mensagem'];
-    
-    $servidor = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "sistemairrigacao";
-     
-    $link = mysqli_connect($servidor, $usuario, $senha, $dbname);
-    $query_select = "SELECT email FROM contato WHERE email = '$email'";
-    $select = mysqli_query($link,$query_select);
-    $array = mysqli_fetch_array($select);
-    $logarray = $array['email'];
-    
-      if($logarray == $email){
- 
-        echo"<script language='javascript' type='text/javascript'>alert('Formulário já enviado, aguarde resposta!');window.location.href='faleconosco.php';</script>";
-        die();
- 
-      }else{
-     $query = "INSERT INTO contato (nome,email, celular,comercial,mensagem) VALUES ('$nome','$email','$celular','$comercial','$mensagem')";
-        $insere = mysqli_query($link,$query);
-        
-        if($insere){
-        echo"<script language='javascript' type='text/javascript'>alert('Formulário enviado com sucesso!');window.location.href='faleconosco.php'</script>";
-        }else{
-        echo"<script language='javascript' type='text/javascript'>alert('Não foi possível enviar o formulário');window.location.href='faleconosco.php'</script>";
-        }
-      }
-   **/

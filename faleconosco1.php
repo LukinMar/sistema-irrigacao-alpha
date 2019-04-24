@@ -18,7 +18,7 @@
     $logarray = $array['email'];
 
       if($logarray == $email){
- 
+
         echo"<script language='javascript' type='text/javascript'>alert('Formulário já enviado, aguarde resposta!');window.location.href='faleconosco.php';</script>";
         die();
  

@@ -9,41 +9,92 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
-    <link rel="stylesheet" href="assets/css/home.css"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 	<title>Sistema Irrigação</title>
 </head>
 <style>
-    
+        html {
+            height: 100%;
+            color: rgb(0,0,0);
+        }
+
         body{
-         background-image: url(images/home.png);
-         background-position:center;
-         background-color:#2e4053;
-         background-size:cover;
+            min-height: 100%;
+            background-image: url(images/home.png);
+            background-position: center;
+            background-color: #2e4053;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (max-device-width: 1100px) {
+            body {
+                background-image: url(images/homemobile.png);
+            }
         }
         
-        @media only screen and (max-device-width: 1100px) {
-        body {
-         background-image: url(images/homemobile.png);
-         background-position:center, center;
-         background-color:#2e4053;
-         background-size:cover;
-         }
+       nav {
+        color: #fff;
+        background-color: #3f566e;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
         }
+        nav ul a:hover {
+            text-decoration: underline;
+        }
+        .side-nav {
+        background-color: #2e4053;
+        }
+        
+        .side-nav a {          
+        color: #fff;
+        }
+        
+        .side-nav hr {
+        color: #2e4053;
+        border-color:#3f566e;
+        box-shadow:1px
+        }
+        
 
 </style>
 <body>
-        <div class="navbar-fixed">
-          <div class="nav-wrapper"></div>
-
-	<div id="menu">
-		<ul>
-			<li><a href="index.php">Home</a></li>
-                        <li><a href="controle.php">Controle</a></li>
-                        <li><a href="dados.php">Dados</a></li>
-			<li><a href="sobre.php">Sobre</a></li>
-			<li><a href="sair.php">Sair</a></li>
-		</ul>
-	</div>
-    </div>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"> &nbsp; &nbsp;Sistema de Irrigação</a>
+        <a href="#" data-activates="menu-mobile" class="button-collapse">
+             <i class="material-icons">menu</i>
+         </a>
+    <ul class="right hide-on-med-and-down">
+             <li><a href="index.php">HOME</a></li>
+             <li><a href="controle.php">SENSORES</a></li>
+             <li><a href="dados.php">DADOS</a></li>
+            <li><a href="faleconosco.php">FALE CONOSCO</a></li>
+            <li><a href="sair.php">SAIR</a></li>
+    </ul>
+    <ul class="side-nav" id="menu-mobile">
+             <li><a href="index.php">HOME</a></li>
+             <hr>
+             <li><a href="controle.php">SENSORES</a></li>
+             <hr>
+             <li><a href="dados.php">DADOS</a></li>
+             <hr>
+             <li><a href="faleconosco.php">FALE CONOSCO</a></li>
+             <hr>
+             <li><a href="sair.php">SAIR</a></li>
+             <hr>
+    </ul>
+     </div>
+ </nav>
 </body>
+ <script>
+ $(function(){
+     $(".button-collapse").sideNav();
+ });
+ </script>
 </html>
