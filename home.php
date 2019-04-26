@@ -11,7 +11,6 @@
     <link rel="manifest" href="images/site.webmanifest">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 	<title>Sistema Irrigação</title>
@@ -37,6 +36,10 @@
             }
         }
         
+        nav .brand-logo {
+           font-size: 1.8rem; 
+        }
+              
        nav {
         color: #fff;
         background-color: #3f566e;
@@ -44,9 +47,7 @@
         height: 56px;
         line-height: 56px;
         }
-        nav ul a:hover {
-            text-decoration: underline;
-        }
+
         .side-nav {
         background-color: #2e4053;
         }
@@ -61,6 +62,14 @@
         box-shadow:1px
         }
         
+        .side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+            color:#fff;
+        }
+
+        nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+            display:inline;
+        }
+
 
 </style>
 <body>
@@ -78,15 +87,15 @@
             <li><a href="sair.php">SAIR</a></li>
     </ul>
     <ul class="side-nav" id="menu-mobile">
-             <li><a href="index.php">HOME</a></li>
+             <li><a href="index.php"><i class="material-icons">home</i>HOME</a></li>
              <hr>
-             <li><a href="controle.php">SENSORES</a></li>
+             <li><a href="controle.php"><i class="material-icons">insert_chart</i>SENSORES</a></li>
              <hr>
-             <li><a href="dados.php">DADOS</a></li>
+             <li><a href="dados.php"><i class="material-icons">search</i>DADOS</a></li>
              <hr>
-             <li><a href="faleconosco.php">FALE CONOSCO</a></li>
+             <li><a href="faleconosco.php"><i class="material-icons">chat</i>FALE CONOSCO</a></li>
              <hr>
-             <li><a href="sair.php">SAIR</a></li>
+             <li><a href="sair.php"><i class="material-icons">exit_to_app</i>SAIR</a></li>
              <hr>
     </ul>
      </div>
