@@ -24,8 +24,6 @@
                             <h1><strong><a>LukinMar</a></strong> Solutions</h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php">Home</a></li>
-						<li><a href="sobre.php">Sobre</a></li>
                                                 <li><a href="login.php">Login</a></li>
 					</ul>
 				</nav>
@@ -33,7 +31,6 @@
                 </div>
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
-		<!-- Banner -->
 			<section id="banner">
 				<h2>Sistema de Irrigação</h2>
 				<p>O mais novo e completo sistema de irrigação  <br /> automática do mercado.</p>
@@ -42,7 +39,6 @@
 				</ul>
 			</section>
 
-			<!-- One -->
 				<section id="one" class="wrapper style1">
 					<div class="container 75%">
 						<div class="row 200%">
@@ -59,36 +55,6 @@
 						</div>
 					</div>
 				</section>
-<!--
-			<!-- Two
-				<section id="two" class="wrapper style2 special">
-					<div class="container">
-						<header class="major">
-							<h2>Fusce ultrices fringilla</h2>
-							<p>Maecenas vitae tellus feugiat eleifend</p>
-						</header>
-						<div class="row 150%">
-							<div class="6u 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic02.jpg" alt="" />
-									<h3>Lorem ipsum dolor sit amet.</h3>
-								</div>
-							</div>
-							<div class="6u$ 12u$(xsmall)">
-								<div class="image fit captioned">
-									<img src="images/pic03.jpg" alt="" />
-									<h3>Illum, maiores tempora cupid?</h3>
-								</div>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button big">Nulla luctus</a></li>
-							<li><a href="#" class="button big">Sed vulputate</a></li>
-						</ul>
-					</div>
-				</section>
--->
-			<!-- Three -->
 				<section id="two" class="wrapper style2 special">
 					<div class="container">
 						<header class="major">
