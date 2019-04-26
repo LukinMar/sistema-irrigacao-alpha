@@ -1,36 +1,38 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="theme-color" content="#ffffff">
-            <meta name="msapplication-TileColor" content="#ffffff">
-            <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-            <meta name="theme-color" content="#ffffff">
-            <title>Sistema Irrigação</title>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-            <link rel="stylesheet" href="assets/css/sistema.css"/>
-	</head>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <title>Sistema Irrigação</title>
+        <meta charset="utf-8" />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="assets/css/sistema.css"/>
+       
+    </head>
 	<body class="landing">
 
 		<!-- Header -->
                 <div>
 			<header id="header" class="alt">
-                            <h1><strong><a>LukinMar</a></strong> Solutions</h1>
+                            <h1 id="lukinmarsolutions"><strong><a>LukinMar</a></strong> Solutions</h1>
 				<nav id="nav">
 					<ul>
-                                                <li><a href="login.php">Login</a></li>
+                                            <li><a href="login.php" id="loginbutton"><i class="material-icons">person</i></a></li>
 					</ul>
 				</nav>
 			</header>
                 </div>
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-
 			<section id="banner">
 				<h2>Sistema de Irrigação</h2>
 				<p>O mais novo e completo sistema de irrigação  <br /> automática do mercado.</p>
@@ -131,10 +133,7 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+
 
 	</body>
 </html>
