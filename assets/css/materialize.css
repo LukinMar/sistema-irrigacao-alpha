@@ -2873,7 +2873,7 @@ ul.staggered-list li {
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only menu-mobilecreen and (max-width: 992px) {
   .hide-on-med-and-down {
     display: none !important;
   }
@@ -4371,7 +4371,7 @@ nav .brand-logo.right {
 
 nav .brand-logo i,
 nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi-"],
-nav .brand-logo i.material-icons {
+nav .right hide-on-med-and-down i.material-icons {
   float: left;
   margin-right: 15px;
 }
