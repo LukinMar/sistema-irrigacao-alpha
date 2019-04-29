@@ -131,9 +131,5 @@
                                         </u>
 				</div>
 			</footer>
-
-		<!-- Scripts -->
-
-
 	</body>
 </html>

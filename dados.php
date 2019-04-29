@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <head>
-       
+   <head>     
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -9,82 +8,13 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dados.css"/>
     <meta charset="utf-8">
     <title>Banco de Dados</title>
     </head>
-    <style>
-        
-        .body{
-          align-items:center;
-         background-color:#2e4053;
-        }
-        .container{
-         margin: 0 auto;
-         background-color:#2e4053;
-         flex-direction: row;
-         justify-content: center;
-         align-items: center
-        }
-        
-        .form{
-            text-align:center;
-            border-radius:5px;
-            padding:10px;
-        }
-        input {
-            padding:10px;
-            margin:8px 0;
-            border:1px solid #000;
-            border-radius:4px;
-        }
-        input[type=text]{
-            width:60px;
-            text-align:center;
-        }
-        
-        input[type=submit]{
-            width:60px;
-            color:#fff;
-            border-radius: 5px;
-            background-color:#3f566e;
-            cursor:pointer;
-        }
-        table{
-            border-collapse: collapse;
-            width:100%;
-            margin-top:10px;
-            text-align:center;
-            background-color:#fff;
-        }
-        
-         input[type=button]{
-         background-color:  #3f566e;
-         cursor:pointer;
-         border-radius: 5px;
-         color:#fff;
-         right: 0.5rem;
-         left: auto;
-      }
-      input[type=button]:hover{
-          color: #6D6D6D;
-      }
-      
-      input[type=submit]:hover{
-      color: #6D6D6D;
-      }
-     
-      p{
-          color:#fff;
-      }
-        table th{
-            height:30px;
-            background-color:#3f566e;
-            color:#fff;
-        }
-    </style>
     <body class="body">
-<div class="container">
+<div class="container"> 
         <div class="form">
         <form action="" method="POST"><br>
             <input type ="text" name="data" placeholder="mês/ano">
@@ -92,6 +22,7 @@
             <input type ="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
         </form>
         </div>
+    <div class="table-box">
         <?php
         include ('conexao.php');
         
@@ -113,35 +44,31 @@
           $dataFormatada = date('d/m/Y',$timestamp);
           
           $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%' ORDER BY data";
-          ?>
-    
-        <p> <?php   echo $dataFormatada;?>
-                </p>
-          <?php
         }
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         
-        echo "<table border='1' text-align='center'>";
+        echo "<table border='1' cellpadding='5'>";
         echo "<tr>
+                <th>Data/Hora</th>
                 <th>Temperatura</th>
                 <th>Umidade Relativa</th>
-                <th>Umidade do Solo</th>
-                <th>Data/Hora</th>
+                <th>Umidade do Solo</th>              
             </tr>";
         while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
             
             $timestamp = strtotime($linha->data);
             $dataTabela = date('d/m/Y H:i:s',$timestamp);
             echo "<tr>";
+            echo "<td>".$dataTabela."</td>";   
             echo "<td>".($linha->temp*100/100)." ºC</td>";
             echo "<td>".($linha->ur*100/100)."%</td>";   
             echo "<td>".$linha->us."%</td>";   
-            echo "<td>".$dataTabela."</td>";   
             echo "</tr>";
 }
         echo "</table>";
         ?>
+    </div>
     </div>
     </body>
 </html>
