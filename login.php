@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+    <script type="text/javascript" src="assets/js/theme.js"></script>
         <title>Login</title>
         
     <style>       
@@ -56,11 +57,12 @@
         nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
             display:inline;
         }
+        
 </style>
     </head>
     
-    <body>
-        
+    <body onload="myFunction()">
+        <div id="login">
         <nav>
     <div class="nav-wrapper">
         <a href="#" class="brand-logo"> &nbsp; &nbsp;Login</a>
@@ -97,10 +99,8 @@
       <p class="message">Não está registrado? <a href="#">Criar conta</a></p>
     </form>
   </div>
-</div>
-
-
-
+</div>                        
+        
 <?php
 
          $servidor = "localhost";
@@ -191,7 +191,33 @@ switch (get_post_action('cadastrar', 'entrar')) {
  $(function(){
      $(".button-collapse").sideNav();
  });
-</script>
+ 
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader-wrapper").style.display = "none";
+  document.getElementById("login").style.display = "block";
+}
+
+</script>
+                        
+                        
+			<!-- =============================================
+				Loading Transition
+			============================================== -->
+			<div id="loader-wrapper">
+                        <div id="preloader_1">
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	                <span></span>
+	                <span></span>
+                        </div>
+			</div>
+        </div>
 </body>
 </html> 

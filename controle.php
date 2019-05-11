@@ -21,6 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/materialize.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
    <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
    <!--
   <script>              
@@ -55,7 +56,7 @@
         </div>
       </nav>
     </div>
-      
+     
 <div class="spinner">
   <div class="rect1"></div>
   <div class="rect2"></div>
