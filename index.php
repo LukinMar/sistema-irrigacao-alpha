@@ -18,12 +18,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="assets/css/sistema.css"/>
-        <script type="text/javascript" src="assets/js/theme.js"></script>
     </head>
 	<body class="landing">
+                      <div id="loading" style="display: block">            
+		<div id="loader-wrapper">
+                    <div id="preloader_1">
+	             <span></span>
+	             <span></span>
+	             <span></span>
+	             <span></span>
+                     <span></span>
+                    </div>
+		</div>
+            </div>
 
 		<!-- Header -->
-                <div>
+                <div id="conteudo" style="display: none">
 			<header id="header" class="alt">
                             <h1 id="lukinmarsolutions"><strong><a>LukinMar</a></strong> Solutions</h1>
 				<nav id="nav">
@@ -120,22 +130,6 @@
 						</ul>
 					</div>
 				</section>
-                        
-                        
-			<!-- =============================================
-				Loading Transition
-			============================================== -->
-			<div id="loader-wrapper">
-                        <div id="preloader_1">
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-                        </div>
-			</div>
-
-			
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -147,7 +141,21 @@
                                         </u>
 				</div>
 			</footer>
-	</body>
+ <script>
+  $('.message a').click(function () {
+  $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
+
+ $(function(){
+     $(".button-collapse").sideNav();
+ });
+ 
+   jQuery(window).load(function () {
+      $("#loading").delay(1000).fadeOut("slow");
+    $("#conteudo").toggle("fast");
+});
+</script>
+</body>
 </html>
 
 <?php

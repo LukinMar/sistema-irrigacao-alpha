@@ -15,7 +15,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-    <script type="text/javascript" src="assets/js/theme.js"></script>
         <title>Login</title>
         
     <style>       
@@ -59,46 +58,55 @@
         }
         
 </style>
-    </head>
-    
-    <body onload="myFunction()">
-        <div id="login">
-        <nav>
-    <div class="nav-wrapper">
+</head>   
+<body>           
+          <div id="loading" style="display: block">            
+		<div id="loader-wrapper">
+                    <div id="preloader_1">
+	             <span></span>
+	             <span></span>
+	             <span></span>
+	             <span></span>
+                     <span></span>
+                    </div>
+		</div>
+            </div>
+
+ <nav>
+    <div class="nav-wrapper"id="conteudo" style="display: none">
         <a href="#" class="brand-logo"> &nbsp; &nbsp;Login</a>
         <a href="#" data-activates="menu-mobile" class="button-collapse">
              <i class="material-icons">menu</i>
-         </a>
+        </a>
     <ul class="right hide-on-med-and-down">
              <li><a href="index.php">HOME</a></li>            
              <li><a href="faleconosco.php">FALE CONOSCO</a></li>
-
     </ul>
     <ul class="side-nav" id="menu-mobile">
               <li><a href="index.php"><i class="material-icons">home</i>HOME</a></li>
              <hr>
              <li><a href="faleconosco.php"><i class="material-icons">chat</i>FALE CONOSCO</a></li>
     </ul>
-     </div>
+    </div>
  </nav>
         
-  <div class="login-page">
-  <div class="form">
-      <form class="register-form" action="" method="post">
-      <input type="text" placeholder="Usuário" name="usuario" required autofocus/>
-      <input type="password" placeholder="Senha" name="senha" required/>
-      <input type="email" placeholder="E-mail" name="e-mail" required/>
-      <button id="criar" name="cadastrar" type="submit">Criar</button>
-      <p class="message">Já está registrado? <a href="#">Entre</a></p>
-    </form>
-     <form class="login-form" action="" method="post">
-      <input type="text" name="login" placeholder="Usuário"required autofocus/>
-      <input type="password" name="pass" placeholder="Senha"required/>
-      <button id="entrar" name="entrar" type="submit">Entrar</button>
-      <br>
-      <p class="message">Não está registrado? <a href="#">Criar conta</a></p>
-    </form>
-  </div>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form" action="" method="post">
+            <input type="text" placeholder="Usuário" name="usuario" required autofocus/>
+            <input type="password" placeholder="Senha" name="senha" required/>
+            <input type="email" placeholder="E-mail" name="e-mail" required/>
+            <button id="criar" name="cadastrar" type="submit">Criar</button>
+            <p class="message">Já está registrado? <a href="#">Entre</a></p>
+        </form>
+        <form class="login-form" action="" method="post">
+            <input type="text" name="login" placeholder="Usuário"required autofocus/>
+            <input type="password" name="pass" placeholder="Senha"required/>
+            <button id="entrar" name="entrar" type="submit">Entrar</button>
+            <br>
+            <p class="message">Não está registrado? <a href="#">Criar conta</a></p>
+        </form>
+    </div>
 </div>                        
         
 <?php
@@ -192,32 +200,11 @@ switch (get_post_action('cadastrar', 'entrar')) {
      $(".button-collapse").sideNav();
  });
  
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader-wrapper").style.display = "none";
-  document.getElementById("login").style.display = "block";
-}
-
+   jQuery(window).load(function () {
+      $("#loading").delay(3000).fadeOut("slow");
+    $("#conteudo").toggle("fast");
+});
 </script>
-                        
-                        
-			<!-- =============================================
-				Loading Transition
-			============================================== -->
-			<div id="loader-wrapper">
-                        <div id="preloader_1">
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-	                <span></span>
-                        </div>
-			</div>
-        </div>
+
 </body>
 </html> 
