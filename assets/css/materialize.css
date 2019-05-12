@@ -9207,7 +9207,7 @@ input[type=range]::-ms-thumb {
 	width: 100%;
 	height: 100%;
 	z-index: 99999;
-	background: #fff;
+	background: #323639;
 	overflow: hidden;
 }
 #preloader_1 {
@@ -9222,7 +9222,7 @@ input[type=range]::-ms-thumb {
 	bottom: 0px;
 	width: 6px;
 	height: 5px;
-	background: #e04f5d;
+	background: #2e4053;
 	position: absolute;
 	animation: preloader_1 1.5s infinite ease-in-out;
 }
@@ -9247,21 +9247,21 @@ input[type=range]::-ms-thumb {
 	0% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #e62d3f;
+		background: #2e4053;
 	}
 	25% {
 		height: 30px;
 		transform: translateY(15px);
-		background: #e62d3f;
+		background: #3f566e;
 	}
 	50% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #ee2438;
+		background: #3f566e;
 	}
 	100% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #ee2438;
+		background:#3f566e;
 	}
 }

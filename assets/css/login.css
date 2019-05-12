@@ -101,7 +101,8 @@ body {
   color: #777;
   background: #2e4053; 
 }
-               
+      
+                     
     #loader-wrapper {
 	position: fixed;
 	top: 0;
@@ -109,7 +110,7 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 99999;
-	background:#101010;
+	background:#2e4053;
 	overflow: hidden;
 }
 #preloader_1 {
@@ -149,21 +150,21 @@ body {
 	0% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #2e4053;
+		background: #3f566e;
 	}
 	25% {
 		height: 30px;
 		transform: translateY(15px);
-		background: #2e4053;
+		background: #3f566e;
 	}
 	50% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #2e4053;
+		background: #3f566e;
 	}
 	100% {
 		height: 5px;
 		transform: translateY(0px);
-		background: #2e4053;
+		background:#3f566e;
 	}
 }
