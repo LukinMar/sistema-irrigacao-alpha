@@ -39,5 +39,4 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 <a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a>
 
 
-<p align="center"><img src="https://i.imgur.com/SiaAzG1.png" width="350"><a href="sistemairrigacao.freetzi.com></a></p>
-</a>
+<p align="center"><img src="https://i.imgur.com/SiaAzG1.png" width="350"></p>
