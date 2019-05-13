@@ -42,47 +42,45 @@
   </head>
   <body>
   <form method="GET" action="192.168.1.25">
-
-      <div class="navbar-fixed">
+    <div class="navbar-fixed">
       <nav class="nav-extended">
         <div class="nav-wrapper">
           <a class="brand-logo center">Sensores</a>
-           <a class="brandlogo">
-               <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
-                    <a> <?php 
-          echo"&nbsp &nbsp";
-          echo $dataFormatada;?></a>     
+          <a class="brandlogo">
+          <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
+          <a> 
+<?php 
+  echo"&nbsp &nbsp";
+  echo $dataFormatada;?></a>     
           </p>
-        </div>
+         </div>
       </nav>
     </div>
      
-<div class="spinner">
-  <div class="rect1"></div>
-  <div class="rect2"></div>
-  <div class="rect3"></div>
-  <div class="rect4"></div>
-  <div class="rect5"></div>
-</div>
-      
-<!--
-            <?php
-        include ('conexao.php');
-
-        $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";
+  <div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
         
-        $stmt = $pdo->prepare($query);
-        $stmt->execute();
-        while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
-            
-            $timestamp = strtotime($linha->data);
+<?php
+  include ('conexao.php');
 
+  $query = "SELECT * FROM dados WHERE data LIKE '%".$dataAtual."%'";       
+  $stmt = $pdo->prepare($query);
+  $stmt->execute();
+    while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
+      $timestamp = strtotime($linha->data);
 ?>
       
 
-           <!--    TEMPERATURA    -->
+    
     <div class="container content" style="z-index:1000;">
       <br/>
+
+      <!--    TEMPERATURA    -->
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
@@ -95,7 +93,8 @@
             </div>
           </div>
         </div>
-          <!-- UMIDADE RELATIVA DO AR -->
+
+        <!-- UMIDADE RELATIVA DO AR -->
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
@@ -109,6 +108,7 @@
             </div>
           </div>
         </div>
+
           <!-- UMIDADE DO SOLO -->          
         <div class="col s12 m6">
           <div class="card">
@@ -123,7 +123,9 @@
               </span>
             </div>
           </div>
-        </div>        <!-- ATIVAÇÃO RELE -->
+        </div>     
+
+         <!-- ATIVAÇÃO RELE -->
         <div class="col s12 m6">
           <div class="card" style="padding-bottom:40px">
             <div class="card-image center">
@@ -140,18 +142,11 @@
           </div>
         </div>
                 <a class="waves-effect waves-light btn col s12" onclick="location.href='grafico.php'">
-                <i class="material-icons left">show_chart</i> Gráfico
-              </a>
-        </div>
-    </div>
-    </div>
-      </div>
-</form>
-
-   
-  </body>
+                <i class="material-icons left">show_chart</i> Gráfico</a>
+  </form>
+</body>
 </html>
 
 <?php
-        }
-        ?>
+  }
+?>

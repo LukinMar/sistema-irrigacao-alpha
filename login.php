@@ -191,6 +191,7 @@ switch (get_post_action('cadastrar', 'entrar')) {
     default:
 }
 ?>
+
  <script>
           $('.message a').click(function () {
   $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
