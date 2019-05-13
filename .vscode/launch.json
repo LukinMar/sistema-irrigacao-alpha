@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "version": "0.2.0",
     "configurations": [
 
@@ -26,7 +25,6 @@
             "port": 80,
         },
 
-=======
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
@@ -39,6 +37,5 @@
             "url": "http://localhost:80/sistemairrigacao",
             "webRoot": "${workspaceFolder}"
         }
->>>>>>> 9e9049defd8e19eb3df3d198db6ea43dbf98e48c
     ]
 }
