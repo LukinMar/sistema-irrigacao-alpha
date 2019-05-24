@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>     
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
@@ -16,9 +16,10 @@
     <body class="body">
 <div class="container"> 
         <div class="form">
-        <form action="" method="POST"><br>
+            <form action="" method="POST"><br>
             <input type ="text" name="data" placeholder="mês/ano">
             <input type ="submit" name="submit" value ="Buscar">
+            <input type ="button" name="relatorio" value="Relatório"  onclick="window.open('gerarPDF.php',' ');">
             <input type ="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
         </form>
         </div>
@@ -72,3 +73,5 @@
     </div>
     </body>
 </html>
+
+<?php
