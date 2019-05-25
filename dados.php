@@ -19,7 +19,7 @@
             <form action="" method="POST"><br>
             <input type ="text" name="data" placeholder="mês/ano">
             <input type ="submit" name="submit" value ="Buscar">
-            <input type ="button" name="relatorio" value="Relatório"  onclick="window.open('gerarPDF.php',' ');">
+            <input type ="button" name="relatorio" value="Relatório"  onclick="window.open('gerarRelatorio.php',' ');">
             <input type ="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
         </form>
         </div>

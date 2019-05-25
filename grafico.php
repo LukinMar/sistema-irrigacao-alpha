@@ -1,57 +1,64 @@
 <?php
-//index.php
-$connect = mysqli_connect("localhost", "root", "", "sistemairrigacao");
-$query = '
-SELECT temp, ur, us, UNIX_TIMESTAMP(CONCAT_WS(" ", data)) AS datetime 
-FROM dados ORDER BY data';
-$result = mysqli_query($connect, $query);
-$rows = array();
-$table = array();
 
-$table['cols'] = array(
- array(
-  'label' => 'Horário', 
-  'type' => 'datetime'
- ),
- array(
-  'label' => 'Temperatura (°C)', 
-  'type' => 'number'
- ),
-  array(
-  'label' => 'Umidade Relativa (%)', 
-  'type' => 'number'
- ),
+    $connect = mysqli_connect("localhost", "root", "", "sistemairrigacao");
+    date_default_timezone_set('America/Sao_Paulo');
+    $data = date('Y-m-d H:i:s');
+
+    $timestamp = strtotime($data);
+
+    $dataformatada = date('d/m/Y H:i:s',$timestamp);
+
+    $query = '
+    SELECT temp, ur, us, UNIX_TIMESTAMP(CONCAT_WS(" ", data)) AS datetime 
+    FROM dados ORDER BY data';
+    $result = mysqli_query($connect, $query);
+    $rows = array();
+    $table = array();
+
+    $table['cols'] = array(
      array(
-  'label' => 'Umidade do Solo (%)', 
-  'type' => 'number'
- )
-);
-
-while($row = mysqli_fetch_array($result))
-{
-
- $sub_array = array();
- $datetime = explode('.', $row["datetime"]);
- $sub_array[] =  array(
-      "v" => 'Date(' . $datetime[0] . '000)'
-     );
- $sub_array[] =  array(
-      "v" => $row["temp"]
-     );
-  $sub_array[] =  array(
-      "v" => $row["ur"]
-     );
-   $sub_array[] =  array(
-      "v" => $row["us"]
-     );
- $rows[] =  array(
-     "c" => $sub_array
+      'label' => 'Horário', 
+      'type' => 'datetime'
+     ),
+     array(
+      'label' => 'Temperatura (°C)', 
+      'type' => 'number'
+     ),
+      array(
+      'label' => 'Umidade Relativa (%)', 
+      'type' => 'number'
+     ),
+         array(
+      'label' => 'Umidade do Solo (%)', 
+      'type' => 'number'
+     )
     );
-}
-$table['rows'] = $rows;
-$jsonTable = json_encode($table);
 
-?>
+    while($row = mysqli_fetch_array($result))
+    {
+
+     $sub_array = array();
+     $datetime = explode('.', $row["datetime"]);
+     $sub_array[] =  array(
+          "v" => 'Date(' . $datetime[0] . '000)'
+         );
+     $sub_array[] =  array(
+          "v" => $row["temp"]
+         );
+      $sub_array[] =  array(
+          "v" => $row["ur"]
+         );
+       $sub_array[] =  array(
+          "v" => $row["us"]
+         );
+     $rows[] =  array(
+         "c" => $sub_array
+        );
+    }
+    $table['rows'] = $rows;
+    $jsonTable = json_encode($table);
+
+    ?>
 
 
 <html>
@@ -60,7 +67,6 @@ $jsonTable = json_encode($table);
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
@@ -72,8 +78,7 @@ $jsonTable = json_encode($table);
   <script type="text/javascript">
    google.charts.load('current', {'packages':['corechart']});
    google.charts.setOnLoadCallback(drawChart);
-   function drawChart()
-   {
+   function drawChart(){
     var data = new google.visualization.DataTable(<?php echo $jsonTable; ?>);
 
     var options = {
@@ -85,7 +90,26 @@ $jsonTable = json_encode($table);
     var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
 
     chart.draw(data, options);
-   }
+    }
+    
+    	window.onload = function() {
+		var imprimir = document.querySelector("#btn-imprimir");
+                var voltar   = document.querySelector("#btn-voltar");
+                var geradoem = document.querySelector("#gerar");
+                
+		    imprimir.onclick = function() {
+		    	imprimir.style.display = 'none';
+                        voltar.style.display = 'none';
+                        geradoem.style.display = 'inline';                      
+		    	window.print();
+                
+		    	var time = window.setTimeout(function() {
+		    		imprimir.style.display = 'inline-block';
+                                voltar.style.display = 'inline-block';
+                                geradoem.style.display = 'none';
+		    	}, 100);
+		    }
+	}
   </script>
   <style>
   .page-wrapper
@@ -245,6 +269,9 @@ user agent stylesheet
 i, cite, em, var, address, dfn {
     font-style: italic;
 }
+.right {
+    float: right !important;
+}
 .waves-effect {
     position: relative;
     cursor: pointer;
@@ -292,15 +319,22 @@ a {
 .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: #3f566e;
 }
+
+.gerar{
+    display: none;
+}
   </style>
  </head>  
  <body>
-  <div class="page-wrapper">
-   <br />
-   <h2 align="center"></h2>
-   <div id="line_chart" style="width: 100%; height: 500px"></div>
-   <a class="waves-effect waves-light btn col s12" id="btn-voltar"onclick="location.href='controle.php'">
-                <i class="material-icons left">chevron_left</i> Voltar
-  </div>
+ <div class ="gerar" id="gerar">Gerado em: <?php echo $dataformatada?> </div>
+    <div class="page-wrapper">
+        <br/>
+        <h2 align="center"></h2>
+    <div id="line_chart" style="width: 100%; height: 500px"></div>
+        <a class="waves-effect waves-light btn col s12" id="btn-voltar"onclick="location.href='controle.php'">
+            <i class="material-icons left">chevron_left</i> Voltar
+        <a class=" right waves-effect waves-light btn col s12" id="btn-imprimir" onclick="window.load()">
+            <i class="material-icons left">print</i> Imprimir
+    </div>
  </body>
 </html>

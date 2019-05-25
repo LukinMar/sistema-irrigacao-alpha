@@ -77,7 +77,7 @@
       
 
     
-    <div class="container content" style="z-index:1000;">
+    <div class="container">
       <br/>
 
       <!--    TEMPERATURA    -->
