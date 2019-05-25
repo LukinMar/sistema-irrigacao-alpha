@@ -22,6 +22,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/materialize.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        
+     .voltar{   
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+     }
+    </style>
    <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
    <!--
   <script>              
@@ -47,7 +54,7 @@
         <div class="nav-wrapper">
           <a class="brand-logo center">Sensores</a>
           <a class="brandlogo">
-          <input type="button" value="Voltar" onclick="location.href='home.php';"></a>
+            <input type="button" class="voltar" value="VOLTAR" onclick="location.href='home.php';"></a>
           <a> 
 <?php 
   echo"&nbsp &nbsp";
