@@ -21,19 +21,14 @@ include('conexao.php');
 $html = 
 "<html>
 <head>
-    <link rel='apple-touch-icon' sizes='180x180' href='images/apple-touch-icon.png'>
-    <link rel='icon' type='image/png' sizes='32x32' href='images/favicon-32x32.png'>
-    <link rel='icon' type='image/png' sizes='16x16' href='images/favicon-16x16.png'>
-    <link rel='manifest' href='images/site.webmanifest'>
-    <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5'>
-    <meta name='msapplication-TileColor' content='#00aba9'>
-    <meta charset='utf-8'>
     <title> Relatório de Leituras</title>
 </head>
 <style>
+
 h2{
 color: #696969;
 }
+
 .footer {
     bottom:0;
     width:100%;
@@ -48,7 +43,7 @@ body{
  }
  
 table{
-    width:100%;
+    width:100%; 
 }
 
 table, th, td{
@@ -58,7 +53,6 @@ table, th, td{
 }
 
 th{
-    position: sticky;
     top:0;
     background-color:#3f566e;
     color:#fff;
@@ -74,48 +68,38 @@ tr td:nth-child(1){
     background:#3f566e;
     color:#fff;
 }
-
-::-webkit-scrollbar {
-}
-
-::-webkit-scrollbar-track {
-box-shadow: inset 0 0 10px #2e4053;
-border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-border-radius: 10px;
-background: #3f566e; 
-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-
-
 </style> 
      <body>
         <h2>Relatório de Leituras</h2>
         <hr> 
-        <table align='center' cellpadding='5'>
+        <table cellpadding='5'>
         <tr>
         <th>Data/Hora</th>
         <th>Temperatura</th>
         <th>Umidade Relativa</th>
         <th>Umidade do Solo</th>              
         </tr>";
+
 while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
             
     $timestamp = strtotime($linha->data);
-    $dataTabela = date('d/m/Y H:i:s',$timestamp);
+    $dataLeitura = date('d/m/Y H:i:s',$timestamp);
+    $temperatura = ($linha->temp*100/100);
+    $umidadeAr = ($linha->ur*100/100);
+    $umidadeSolo = ($linha->us*100/100);
     $html .= 
-         "<tr>
-         <td>$dataTabela</td>
-         <td>$linha->temp ºC</td>
-         <td>$linha->ur %</td>
-         <td>$linha->us%</td>
+         "
+         <tbody>
+         <tr>
+         <td>$dataLeitura</td>
+         <td>$temperatura ºC</td>
+         <td>$umidadeAr%</td>
+         <td>$umidadeSolo%</td>
          </tr>";
 }
  
     
-$html = $html . "</table>"
+$html = $html . "</tbody> </table> </div>"
         . "      <div class='footer'>"
         . "         <hr><p> Gerada em: $dataFooter </p>"
         . "      </div class='footer'> "
