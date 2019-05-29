@@ -89,7 +89,6 @@ while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
     $umidadeSolo = ($linha->us*100/100);
     $html .= 
          "
-         <tbody>
          <tr>
          <td>$dataLeitura</td>
          <td>$temperatura ºC</td>
@@ -99,7 +98,7 @@ while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
 }
  
     
-$html = $html . "</tbody> </table> </div>"
+$html = $html . "</table> </div>"
         . "      <div class='footer'>"
         . "         <hr><p> Gerada em: $dataFooter </p>"
         . "      </div class='footer'> "
