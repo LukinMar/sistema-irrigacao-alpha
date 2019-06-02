@@ -202,7 +202,7 @@ switch (get_post_action('cadastrar', 'entrar')) {
  });
  
    jQuery(window).load(function () {
-      $("#loading").delay(3000).fadeOut("slow");
+      $("#loading").delay(1900).fadeOut("slow");
     $("#conteudo").toggle("fast");
 });
 </script>

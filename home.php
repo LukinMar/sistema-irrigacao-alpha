@@ -73,7 +73,8 @@
 
 </style>
 <body>
-<nav>
+    
+    <nav>
     <div class="nav-wrapper">
         <a href="#" class="brand-logo"> &nbsp; &nbsp;Sistema de Irrigação</a>
         <a href="#" data-activates="menu-mobile" class="button-collapse">
@@ -99,11 +100,15 @@
              <hr>
     </ul>
      </div>
+                 </div>
  </nav>
+
 </body>
  <script>
+
  $(function(){
      $(".button-collapse").sideNav();
  });
+
  </script>
 </html>
