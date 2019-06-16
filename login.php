@@ -66,14 +66,7 @@ session_start();
             text-align: center;
             font-weight: bold;
         }
-        
-         #userok{
-            margin: 10px 0 0;
-            color: green;
-            font-size: 14px;
-            text-align: center;
-            font-weight: bold;
-        }
+       
 </style>
 </head>
 <body>
@@ -108,10 +101,7 @@ session_start();
             <?php endif; unset($_SESSION['error-user']); ?>
             <?php if(isset($_SESSION['error'])): ?>
             <p id="error"> ERRO AO CADASTRAR! </p>
-            <?php endif; unset($_SESSION['error']); ?>
-            <?php if(isset($_SESSION['user-ok'])): ?>
-            <p id="error"> USUÁRIO CADASTRADO COM SUCESSO! </p>
-            <?php endif; unset($_SESSION['user-ok']); ?>            
+            <?php endif; unset($_SESSION['error']); ?>       
             <p class="message">Já está registrado? <a href="#">Entre</a></p>
         </form>
         <form class="login-form" action="" method="post">
