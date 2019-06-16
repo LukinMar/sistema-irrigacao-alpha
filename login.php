@@ -66,7 +66,6 @@ session_start();
             text-align: center;
             font-weight: bold;
         }
-       
 </style>
 </head>
 <body>
@@ -101,7 +100,10 @@ session_start();
             <?php endif; unset($_SESSION['error-user']); ?>
             <?php if(isset($_SESSION['error'])): ?>
             <p id="error"> ERRO AO CADASTRAR! </p>
-            <?php endif; unset($_SESSION['error']); ?>       
+            <?php endif; unset($_SESSION['error']); ?>
+            <?php if(isset($_SESSION['user-ok'])): ?>
+            <p id="error"> USUÁRIO CADASTRADO COM SUCESSO! </p>
+            <?php endif; unset($_SESSION['user-ok']); ?>            
             <p class="message">Já está registrado? <a href="#">Entre</a></p>
         </form>
         <form class="login-form" action="" method="post">
@@ -157,11 +159,11 @@ switch (get_post_action('cadastrar', 'entrar')) {
             $insere = mysqli_query($link,$query);
               }          
             if($insere){
-               $_SERVER['usuario'] = true;  
-                echo '<script type="text/javascript">window.location = "home.php"</script>';
+               $_SESSION['usuario'] = true;  
+               	echo '<script type="text/javascript">window.location = "home.php"</script>';
                	exit();
             }else{
-               $_SERVER['error'] = true;
+               $_SESSION['error'] = true;
                	echo '<script type="text/javascript">window.location = "login.php"</script>';
              	exit();
             }
