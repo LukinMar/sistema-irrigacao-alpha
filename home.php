@@ -1,5 +1,5 @@
     <?php
-    session_start();
+    include('validar-usuario.php');
 ?>
 <!DOCTYPE html>
 <html> 
