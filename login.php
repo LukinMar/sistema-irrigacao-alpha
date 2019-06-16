@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,24 +59,26 @@
         nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
             display:inline;
         }
+        #error{
+            margin: 10px 0 0;
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
         
+         #userok{
+            margin: 10px 0 0;
+            color: green;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+        }
 </style>
-</head>   
-<body>           
-          <div id="loading" style="display: block">            
-		<div id="loader-wrapper">
-                    <div id="preloader_1">
-	             <span></span>
-	             <span></span>
-	             <span></span>
-	             <span></span>
-                     <span></span>
-                    </div>
-		</div>
-            </div>
-
+</head>
+<body>
  <nav>
-    <div class="nav-wrapper"id="conteudo" style="display: none">
+    <div class="nav-wrapper"id="conteudo">
         <a href="#" class="brand-logo"> &nbsp; &nbsp;Login</a>
         <a href="#" data-activates="menu-mobile" class="button-collapse">
              <i class="material-icons">menu</i>
@@ -97,6 +102,16 @@
             <input type="password" placeholder="Senha" name="senha" required/>
             <input type="email" placeholder="E-mail" name="e-mail" required/>
             <button id="criar" name="cadastrar" type="submit">Criar</button>
+            <br>
+            <?php if(isset($_SESSION['error-user'])): ?>
+            <p id="error"> USUÁRIO JÁ EXISTE! </p>
+            <?php endif; unset($_SESSION['error-user']); ?>
+            <?php if(isset($_SESSION['error'])): ?>
+            <p id="error"> ERRO AO CADASTRAR! </p>
+            <?php endif; unset($_SESSION['error']); ?>
+            <?php if(isset($_SESSION['user-ok'])): ?>
+            <p id="error"> USUÁRIO CADASTRADO COM SUCESSO! </p>
+            <?php endif; unset($_SESSION['user-ok']); ?>            
             <p class="message">Já está registrado? <a href="#">Entre</a></p>
         </form>
         <form class="login-form" action="" method="post">
@@ -104,13 +119,16 @@
             <input type="password" name="pass" placeholder="Senha"required/>
             <button id="entrar" name="entrar" type="submit">Entrar</button>
             <br>
+
+            <?php if(isset($_SESSION['nao_autenticado'])): ?>
+            <p id="error"> USUÁRIO OU SENHA INCORRETOS! </p>
+            <?php endif; unset($_SESSION['nao_autenticado']); ?>
             <p class="message">Não está registrado? <a href="#">Criar conta</a></p>
         </form>
     </div>
 </div>                        
         
 <?php
-
          $servidor = "localhost";
          $logindb = "root";
          $passdb = "";
@@ -140,52 +158,43 @@ switch (get_post_action('cadastrar', 'entrar')) {
         $array = mysqli_fetch_array($select);
         $logarray = $array['login'];
         
-       if($usuario == "" || $usuario == null){
-       echo"<script language='javascript' type='text/javascript'>alert('O campo usuário deve ser preenchido');window.location.href='#';</script>";
-        }else{
           if($logarray == $usuario){
-            echo"<script language='javascript' type='text/javascript'>alert('Usuário já existente');window.location.href='#';</script>";
-            die();
+            $_SESSION['error-user'] = true;
+           echo '<script type="text/javascript">window.location = "login.php"</script>';
+            exit();
           }else{
             $query = "INSERT INTO usuarios (login,senha,email) VALUES ('$usuario','$senha','$email')";
             $insere = mysqli_query($link,$query);
               }          
             if($insere){
-               echo"<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='#'</script>";
+               $_SERVER['usuario'] = true;  
+                echo '<script type="text/javascript">window.location = "home.php"</script>';
+               	exit();
             }else{
-             echo"<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar esse usuário');window.location.href='#'</script>";
+               $_SERVER['error'] = true;
+               	echo '<script type="text/javascript">window.location = "login.php"</script>';
+             	exit();
             }
-          }
           
         break;
 
     case 'entrar':
-
-        $login = $_POST['login'];
-        $pass = $_POST['pass'];
+        
+        
+        $login = mysqli_real_escape_string($link, $_POST['login']);
+        $pass = mysqli_real_escape_string($link, $_POST['pass']);
         
     $get = mysqli_query($link, "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$pass'");
-    $num = mysqli_num_rows($get);
+    $row = mysqli_num_rows($get);
         
-   if ($num == 1){
-       while($percorrer = mysqli_fetch_array($get)){
-           $nivel = $percorrer['acesso'];
-           $nome = $percorrer['login'];
-         
-           session_start();
-           
-           if($nivel == 1){
-               $_SESSION['nacesso'] = $nome;
-                echo '<script type="text/javascript">window.location = "home.php"</script>';
-               
-           }else{
-               $_SESSION['normal'] = $nome;  
-           }
-              echo '<script type="text/javascript">window.location = "home.php"</script>';
-       }
-       }else{ 
-           
-       echo "<script language='javascript' type='text/javascript'>alert('Usuário ou senha incorretos!');window.location.href='login.php';</script>";
+if ($row == 1){
+       $_SESSION['usuario'] = $login;
+	echo '<script type="text/javascript">window.location = "home.php"</script>';
+	exit();
+    }else{ 
+        $_SESSION['nao_autenticado'] = true;
+	echo '<script type="text/javascript">window.location = "login.php"</script>';
+	exit();
    } 
         break;
     default:
@@ -193,18 +202,14 @@ switch (get_post_action('cadastrar', 'entrar')) {
 ?>
 
  <script>
-          $('.message a').click(function () {
+     
+  $('.message a').click(function () {
   $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
 });
-
  $(function(){
      $(".button-collapse").sideNav();
  });
  
-   jQuery(window).load(function () {
-      $("#loading").delay(1900).fadeOut("slow");
-    $("#conteudo").toggle("fast");
-});
 </script>
 
 </body>
