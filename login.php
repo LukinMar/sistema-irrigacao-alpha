@@ -95,15 +95,12 @@ session_start();
             <input type="email" placeholder="E-mail" name="e-mail" required/>
             <button id="criar" name="cadastrar" type="submit">Criar</button>
             <br>
-            <?php if(isset($_SESSION['error-user'])): ?>
+            <?php if(isset($_SESSION['user-exist'])): ?>
             <p id="error"> USUÁRIO JÁ EXISTE! </p>
-            <?php endif; unset($_SESSION['error-user']); ?>
+            <?php endif; unset($_SESSION['user-exist']); ?>
             <?php if(isset($_SESSION['error'])): ?>
             <p id="error"> ERRO AO CADASTRAR! </p>
             <?php endif; unset($_SESSION['error']); ?>
-            <?php if(isset($_SESSION['user-ok'])): ?>
-            <p id="error"> USUÁRIO CADASTRADO COM SUCESSO! </p>
-            <?php endif; unset($_SESSION['user-ok']); ?>            
             <p class="message">Já está registrado? <a href="#">Entre</a></p>
         </form>
         <form class="login-form" action="" method="post">
@@ -151,13 +148,13 @@ switch (get_post_action('cadastrar', 'entrar')) {
         $logarray = $array['login'];
         
           if($logarray == $usuario){
-            $_SESSION['error-user'] = true;
+            $_SESSION['user-exist'] = true;
            echo '<script type="text/javascript">window.location = "login.php"</script>';
             exit();
           }else{
             $query = "INSERT INTO usuarios (login,senha,email) VALUES ('$usuario','$senha','$email')";
             $insere = mysqli_query($link,$query);
-              }          
+            }          
             if($insere){
                $_SESSION['usuario'] = true;  
                	echo '<script type="text/javascript">window.location = "home.php"</script>';
