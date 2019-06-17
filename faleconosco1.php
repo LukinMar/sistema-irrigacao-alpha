@@ -1,17 +1,15 @@
 
 <?php
+    include ('conexao.php');
+
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
     $email = filter_input (INPUT_POST,'email', FILTER_SANITIZE_STRING);
     $celular = filter_input (INPUT_POST, 'celular',FILTER_SANITIZE_STRING);
     $comercial = filter_input (INPUT_POST, 'comercial', FILTER_SANITIZE_STRING);
     $mensagem = filter_input (INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
-    
- $servidor = "localhost";
- $usuario = "root";
- $senha = "";
- $dbname = "sistemairrigacao";
+ 
      
-    $link = mysqli_connect($servidor, $usuario, $senha, $dbname);
+$link = mysqli_connect($host, $user, $pass, $dbname);
     $query_select = "SELECT email FROM contato WHERE email = '$email'";
     $select = mysqli_query($link,$query_select);
     $array = mysqli_fetch_array($select);
