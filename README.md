@@ -42,4 +42,4 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 
 <a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação </a>
 
-<p align="center"><a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
+<p align="center"><a href="https://sistema-irrigacao-v1.000webhostapp.com/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
