@@ -2,7 +2,7 @@
 
 Projeto pessoal de irrigação automatizada para aprendizado e resolução de um problema familiar, usando MySQL, PHP, JAVA e C++
 
-PHP e MySQL - WEB <br>
+PHP, JavaScript e MySQL - WEB <br>
 JAVA - APP Android (webview) <br>
 C++ - Programação do NodeMCU <br>
 <hr>
@@ -38,5 +38,6 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 
 <a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a>
 
+<a href="https://https://sistema-irrigacao-v1.000webhostapp.com/> Sistema de Irrigação </a>
 
 <p align="center"><img src="https://i.imgur.com/SiaAzG1.png" width="350"></p>
