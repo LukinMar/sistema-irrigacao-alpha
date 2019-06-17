@@ -145,11 +145,11 @@ switch (get_post_action('cadastrar', 'entrar')) {
         $select = mysqli_query($link,$query_select);
         $array = mysqli_fetch_array($select);
         $logarray = $array['login'];
-        
+
           if($logarray == $usuario){
             $_SESSION['user-exist'] = true;
            echo '<script type="text/javascript">window.location = "login.php"</script>';
-            exit();
+            die();
           }else{
             $query = "INSERT INTO usuarios (login,senha,email) VALUES ('$usuario','$senha','$email')";
             $insere = mysqli_query($link,$query);
@@ -166,8 +166,7 @@ switch (get_post_action('cadastrar', 'entrar')) {
         break;
 
     case 'entrar':
-        
-        
+
         $login = mysqli_real_escape_string($link, $_POST['login']);
         $pass = mysqli_real_escape_string($link, $_POST['pass']);
         
