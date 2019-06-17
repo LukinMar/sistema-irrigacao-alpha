@@ -118,12 +118,11 @@ session_start();
 </div>                        
         
 <?php
-         $servidor = "localhost";
-         $logindb = "root";
-         $passdb = "";
-         $dbname = "sistemairrigacao";      
+include ('conexao.php');
+  
 
-$link = mysqli_connect($servidor, $logindb, $passdb, $dbname);
+$link = mysqli_connect($host, $user, $pass, $dbname);     
+
     function get_post_action($name)
 {
     $params = func_get_args();
