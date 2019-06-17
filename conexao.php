@@ -9,3 +9,5 @@ try {
 } catch (PDOException $erro) {
     echo "Erro de conexão, detalhe:" . $erro->getMessage();
 }
+
+?>
