@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!$_SESSION['usuario']) {
-	header('Location: login.php');
+echo '<script type="text/javascript">window.location = "login.php"</script>';
 	exit();
 }
 
