@@ -1,6 +1,6 @@
 <h1> Sistema de Irrigação </h1>
 
-Projeto pessoal de irrigação automatizada para aprendizado e resolução de um problema familiar, usando MySQL, PHP, JAVA e C++
+Projeto pessoal de irrigação automatizada para aprendizado e resolução de um problema familiar, usando MySQL, PHP, JavaScript, JAVA e C++
 
 PHP, JavaScript e MySQL - WEB <br>
 JAVA - APP Android (webview) <br>
@@ -29,14 +29,13 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 
 <hr> 
 
-Personal irrigation project for learning and solving a familiar problem using MySQL, PHP, JAVA and C ++
+Personal irrigation project for learning and solving a familiar problem using MySQL, PHP, JavaScript, JAVA and C ++
 
-PHP and MySQL - WEB <br>
+PHP, JavaScript and MySQL - WEB <br>
 JAVA - APP Android (webview) <br>
 C ++ - NodeMCU <br>
 
 <h4> What does the system do? </ h4>
-
 <p> The system reads 3 sensors (ambient temperature, relative air humidity and soil moisture) every 1 minute (this value can be modified), then saves the data from the readings in the database, if the soil moisture value is below the threshold value (this value can be modified) it will activate the irrigation system automatically, after that will save the data of the readings in the database, and can be viewed on the sensor control screen, where we can view the sensor data and activate the irrigation system manually.</p> <p> In this page we can see the graph with all the readings and if necessary, we can print the graph.</p> <p> We can check all the readings, by <b>day/month/year</b> or by <b>month/year</b> and generate the report of the day. </p>
 
 <hr>
