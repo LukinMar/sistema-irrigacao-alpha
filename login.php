@@ -158,7 +158,6 @@ switch (get_post_action('cadastrar', 'entrar')) {
             if($insere){
                $_SESSION['usuario'] = true;  
                	echo '<script type="text/javascript">window.location = "home.php"</script>';
-               	exit();
             }else{
                $_SESSION['error'] = true;
                	echo '<script type="text/javascript">window.location = "login.php"</script>';
