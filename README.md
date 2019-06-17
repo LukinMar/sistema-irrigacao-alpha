@@ -17,11 +17,11 @@ RAM: 64 kB.<br>
 FLASH: QSPI Externo – de 512 kB até 4 MB.<br>
 WiFi: IEEE 802.11 – b/g/n.<br>
 
-<a href="https://nodemcu.readthedocs.io/en/master/"> Documentação NodeMCU </a> <br>
-
-<a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação </a>
-
-<a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Baixar APP - Android </a>
+<ul>
+	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> Documentação NodeMCU </a></li>
+  <li type="square"><a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação</a></li>
+	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Baixar APP - Android </a></li>
+</ul>
 
 <hr> 
 
@@ -40,10 +40,10 @@ RAM: 64 kB.<br>
 FLASH: QSPI – 512 kB - 4 MB.<br>
 WiFi: IEEE 802.11 – b/g/n.<br>
 
-<a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a>
-
-<a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação </a>
-
-<a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Download APP - Android </a>
+<ul>
+	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a></li>
+  <li type="square"><a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação </a></li>
+	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Download APP - Android </a></li>
+</ul>
 
 <p align="center"><a href="https://sistema-irrigacao-v1.000webhostapp.com/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
