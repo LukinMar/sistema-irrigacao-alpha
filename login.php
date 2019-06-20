@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel="manifest" href="images/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-TileColor" content="#2e4053">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">
         <link rel="stylesheet" href="assets/css/login.css" />
@@ -78,11 +78,14 @@
         <ul class="right hide-on-med-and-down">
                  <li><a href="index.php">HOME</a></li>            
                  <li><a href="faleconosco.php">FALE CONOSCO</a></li>
+                 <li><a href="sobre.html">SOBRE</a></li>
         </ul>
         <ul class="side-nav" id="menu-mobile">
                   <li><a href="index.php"><i class="material-icons">home</i>HOME</a></li>
                  <hr>
                  <li><a href="faleconosco.php"><i class="material-icons">chat</i>FALE CONOSCO</a></li>
+                 <hr>
+                 <li><a href="sobre.html"><i class="material-icons">info</i>SOBRE</a></li>
         </ul>
         </div>
      </nav>

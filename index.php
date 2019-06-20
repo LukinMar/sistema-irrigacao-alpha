@@ -6,7 +6,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <link rel="manifest" href="images/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-TileColor" content="#2e4053">
         <meta name="theme-color" content="#ffffff">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -47,7 +47,7 @@
 		<h2>Sistema de Irrigação</h2>
 		<p>O mais novo e completo sistema de irrigação  <br /> automática do mercado.</p>
 		<ul class="actions">
-			<li><a href="faleconosco.php" class="button big">Fale Conosco</a></li>
+			<li><a href="sobre.html" class="button big">Sobre</a></li>
 		</ul>
 	</section>
 
