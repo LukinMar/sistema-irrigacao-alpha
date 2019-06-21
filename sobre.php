@@ -1,6 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -233,5 +232,6 @@
     <!--Main-active-JS-->
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
+<?php
+?>
