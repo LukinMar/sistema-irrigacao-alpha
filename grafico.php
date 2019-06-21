@@ -117,6 +117,17 @@
    width:1000px;
    margin:0 auto;
   }
+
+  .btn{
+    border-radius: 50px;
+          color: #ffffff;
+          background-color: #2e4053;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          border: none;
+          -webkit-box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2); 
+  }
   
 .btn, .btn-large, .btn-small, .btn-floating, .btn-large, .btn-small, .btn-flat {
     font-size: 14px;
@@ -132,6 +143,7 @@
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
+
 }
 .waves-effect {
     position: relative;
@@ -291,8 +303,13 @@ i, cite, em, var, address, dfn {
     text-decoration: none;
     color: #fff;
     background-color: #2e4053;
+    padding: 8px 30px;
     text-align: center;
     letter-spacing: .5px;
+    border: none;
+    -webkit-box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
@@ -303,7 +320,7 @@ i, cite, em, var, address, dfn {
 }
 .btn, .btn-large, .btn-small, .btn-flat {
     border: none;
-    border-radius: 2px;
+    border-radius: 50px;
     display: inline-block;
     line-height: 36px;
     padding: 0 16px;
@@ -317,7 +334,8 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 .btn:hover, .btn-large:hover, .btn-small:hover {
-    background-color: #3f566e;
+        background: #fff;
+        color:#2e4053;
 }
 
 .gerar{
@@ -331,9 +349,9 @@ a {
         <br/>
         <h2 align="center"></h2>
     <div id="line_chart" style="width: 100%; height: 500px"></div>
-        <a class="waves-effect waves-light btn col s12" id="btn-voltar"onclick="location.href='controle.php'">
+        <a class=" btn col s12" id="btn-voltar"onclick="location.href='controle.php'">
             <i class="material-icons left">chevron_left</i> Voltar
-        <a class=" right waves-effect waves-light btn col s12" id="btn-imprimir" onclick="window.load()">
+        <a class=" right  btn col s12" id="btn-imprimir" onclick="window.load()">
             <i class="material-icons left">print</i> Imprimir
     </div>
  </body>

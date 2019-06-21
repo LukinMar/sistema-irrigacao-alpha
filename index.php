@@ -20,19 +20,15 @@
         <link rel="stylesheet" href="assets/css/sistema.css"/>
 </head>
 <body class="landing">
- 	<div id="loading" style="display: block">            
-		<div id="loader-wrapper">
-    		<div id="preloader_1">
-	            <span></span>
-	            <span></span>
-	            <span></span>
-	            <span></span>
-				<span></span>
-        	</div>
-		</div>
+<div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
     </div>
-
-	<div id="conteudo" style="display: none">
+	<div id="conteudo">
 		<header id="header" class="alt">
             <h1 id="lukinmarsolutions"><strong><a>LukinMar</a></strong> Solutions</h1>
 			<nav id="nav">
@@ -47,7 +43,7 @@
 		<h2>Sistema de Irrigação</h2>
 		<p>O mais novo e completo sistema de irrigação  <br /> automática do mercado.</p>
 		<ul class="actions">
-			<li><a href="sobre.html" class="button big">Sobre</a></li>
+			<li><a href="sobre.php" class="button special big">Sobre</a></li>
 		</ul>
 	</section>
 
@@ -135,29 +131,38 @@
 	
 	<footer id="footer">
 		<div class="container">
+		<p>Desenvolvido por Lucas Martins</p>
 			<ul class="icons">
-				<li><a href="http://www.facebook.com" class="icon fa-facebook"></a></li>
-				<li><a href="http://www.twitter.com" class="icon fa-twitter"></a></li>
-				<li><a href="http://instagram.com" class="icon fa-instagram"></a></li>
-            </u>
+				<li><a href="http://www.facebook.com/lukinmar" target="_blank" class="icon fa-facebook"></a></li>
+				<li><a href="http://www.twitter.com/lukinmar" target="_blank" class="icon fa-instagram"></a></li>
+				<li><a href="http://instagram.com/lukinmar" target="_blank" class="icon fa-github"></a></li>
+			</u>			
 		</div>
 	</footer>
  
-<script>
-  $('.message a').click(function () {
-  $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
-});
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!--Plugin-JS-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
- $(function(){
-     $(".button-collapse").sideNav();
- });
- 
-   jQuery(window).load(function () {
-      $("#loading").delay(1000).fadeOut("slow");
-    $("#conteudo").toggle("fast");
-});
-</script>
+    
+    <script>
 
+    $('.message a').click(function () {
+    $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+    $(function(){
+    $(".button-collapse").sideNav();
+    });
+
+    </script>
 </body>
 </html>
 

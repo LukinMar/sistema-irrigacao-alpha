@@ -85,7 +85,7 @@
              <li><a href="controle.php">SENSORES</a></li>
              <li><a href="dados.php">DADOS</a></li>
             <li><a href="faleconosco.php">FALE CONOSCO</a></li>
-            <li><a href="sobre.html">SOBRE</a></li>
+            <li><a href="sobre.php">SOBRE</a></li>
             <li><a href="sair.php">SAIR</a></li>
     </ul>
     <ul class="side-nav" id="menu-mobile">
@@ -97,7 +97,7 @@
              <hr>
              <li><a href="faleconosco.php"><i class="material-icons">chat</i>FALE CONOSCO</a></li>
              <hr>
-             <li><a href="sobre.html"><i class="material-icons">info</i>SOBRE</a></li>
+             <li><a href="sobre.php"><i class="material-icons">info</i>SOBRE</a></li>
              <hr>
              <li><a href="sair.php"><i class="material-icons">exit_to_app</i>SAIR</a></li>
              <hr>

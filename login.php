@@ -1,5 +1,6 @@
     <?php
     session_start();
+    ob_start();
     ?>
     <!DOCTYPE html>
     <html>
@@ -18,7 +19,7 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-            <title>Login</title>
+        <title>Login</title>
 
         <style>       
 
@@ -69,6 +70,15 @@
     </style>
     </head>
     <body>
+    <div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+
      <nav>
         <div class="nav-wrapper"id="conteudo">
             <a href="#" class="brand-logo"> &nbsp; &nbsp;Login</a>
@@ -78,14 +88,14 @@
         <ul class="right hide-on-med-and-down">
                  <li><a href="index.php">HOME</a></li>            
                  <li><a href="faleconosco.php">FALE CONOSCO</a></li>
-                 <li><a href="sobre.html">SOBRE</a></li>
+                 <li><a href="sobre.php">SOBRE</a></li>
         </ul>
         <ul class="side-nav" id="menu-mobile">
                   <li><a href="index.php"><i class="material-icons">home</i>HOME</a></li>
                  <hr>
                  <li><a href="faleconosco.php"><i class="material-icons">chat</i>FALE CONOSCO</a></li>
                  <hr>
-                 <li><a href="sobre.html"><i class="material-icons">info</i>SOBRE</a></li>
+                 <li><a href="sobre.php"><i class="material-icons">info</i>SOBRE</a></li>
         </ul>
         </div>
      </nav>
@@ -189,14 +199,27 @@
     }
     ?>
 
-     <script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!--Plugin-JS-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-      $('.message a').click(function () {
-      $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    
+    <script>
+
+    $('.message a').click(function () {
+    $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
     });
-     $(function(){
-         $(".button-collapse").sideNav();
-     });
+    $(function(){
+    $(".button-collapse").sideNav();
+    });
 
     </script>
 

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
@@ -38,7 +39,6 @@
 
     <div class="mainmenu-area" data-spy="affix" data-offset-top="100">
             <div class="container">
-                <!--Logo-->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
                         <span class="icon-bar"></span>
@@ -52,8 +52,8 @@
                 <nav class="collapse navbar-collapse" id="primary-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="index.php">HOME</a></li>
-                            <li><a href="login.php">LOGIN</a></li>
                             <li><a href="faleconosco.php">FALE CONOSCO</a></li>
+                            <li><a href="login.php">LOGIN</a></li>
                         </ul>
                     </nav>
             </div>
@@ -65,7 +65,7 @@
                 <div class="col-xs-12 col-md-7 header-text">
                     <h2>Sistema de Irrigação</h2>
                     <p>Projeto pessoal de irrigação automatizada para aprendizado e resolução de um problema familiar, usando PHP, JavaScript, JAVA, C++ e MySQL.</p>
-                    <a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs" target="_blank" class="button white">Download APP</a>
+                   <a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs" target="_blank" class="button white">Download APP <i class="material-icons left">file_download </i></a>
                 </div>
                 <div class="hidden-xs hidden-sm col-md-5 text-right">
                     <div class="screen-box screen-slider">
@@ -93,7 +93,6 @@
                     </div>
                 </div>
             </div>
-
     </header>
 
     <section class="gray-bg section-padding" id="service-page">
@@ -117,7 +116,7 @@
             FLASH: QSPI Externo – de 512 kB até 4 MB.<br>
             WiFi: IEEE 802.11 – b/g/n.<br></p>
             <br>
-            <a href="https://nodemcu.readthedocs.io/en/master/" target="_blank" class="button white">Documentação NodeMCU</a>
+            <a href="https://nodemcu.readthedocs.io/en/master/" target="_blank" class="button blue">Documentação NodeMCU</a>
         </div>
     </section>
 
@@ -190,16 +189,16 @@
     <footer class="footer-area relative gray-bg" id="contact-page">
         <div class="footer-middle">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                     <ul class="social-menu ">
-                            <li><p>Sistema desenvolvido por Lucas Martins.</p></li>
+                <div class="row text-center">
+                    <div class="social-menu text-center">
+                            <p>Desenvolvido por Lucas Martins.</p>
+                    </div>
+                     <ul class="social-menu text-center">                  
                             <li><a href="https://www.facebook.com/lukinmar " target="_blank" ><i class="ti-facebook"></i></a></li>
                             <li><a href="https://www.instagram.com/lukinmar" target="_blank" ><i class="ti-instagram"></i></a></li>
                             <li><a href="https://github.com/LukinMar" target="_blank" ><i class="ti-github"></i></a></li>
                      </ul>
                     </div>
-                </div>
             </div>
         </div>
         <div class="footer-bottom gray-bg">
@@ -213,7 +212,13 @@
 
 
 
+<script>
 
+        $(window).on("load", function () {
+            $('.preloader').fadeOut(500);
+        })(jQuery);
+
+</script>
 
     <!--Vendor-JS-->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>

@@ -113,19 +113,19 @@ input:-webkit-autofill:focus {
   height: 36px;
   text-align: center;
   line-height: 2.5em;
-  background-color: #ffffff;
-  color: #2e4053;
+  background-color: #2e4053;
+  color: #ffffff;
   border-radius: 100px;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
   font-size: 15px;
 }
 
 .social-menu li a:hover {
-  background-color: #2e4053;
-  color: #ffffff;
-  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #2e4053;
+  -webkit-box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 /**
@@ -149,6 +149,12 @@ input:-webkit-autofill:focus {
 
 .gray-bg {
   background-color: #f2fefe;
+}
+
+.left {
+  float: left !important;
+  font-size: 1.3rem;
+  line-height: inherit;
 }
 
 /**
@@ -180,7 +186,7 @@ input:-webkit-autofill:focus {
 }
 
 .button i {
-  margin-left: 5px;
+  margin: 2px 5px 0 0;
 }
 
 /**
@@ -343,7 +349,16 @@ input:-webkit-autofill:focus {
   background: url("logo_lukinmar_solutions_total") no-repeat scroll center
     bottom -120px / 100% auto;
 }
-
+.side-nav li > a > i,
+.side-nav li > a > [class^="mdi-"],
+.side-nav li > a > [class*="mdi-"],
+.side-nav li > a > i.material-icons {
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  margin: 0 32px 0 0;
+  width: 24px;
+}
 .overlay {
   position: relative;
 }
@@ -753,16 +768,19 @@ input:-webkit-autofill:focus {
 .footer-area {
   padding-top: 120px;
   z-index: 1;
+  text-align: center;
 }
 
 .footer-bg {
   background: url("images/angle-bg.png") no-repeat scroll center bottom / 100%
     auto;
+  text-align: center;
   z-index: -1;
 }
 
 .footer-top {
   margin-bottom: 150px;
+  text-align: center;
 }
 
 .side-icon-box {
@@ -789,12 +807,14 @@ input:-webkit-autofill:focus {
 
 .footer-middle {
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 25px;
   padding-bottom: 15px;
+  text-align: center;
 }
 
 /***

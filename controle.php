@@ -23,7 +23,22 @@
     <link rel="stylesheet" href="assets/css/materialize.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
-        
+
+     .btn, .btn-large, .btn-small, .btn-flat {
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}   
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+        background: #fff;
+        color:#2e4053;
+}
      .voltar{   
     font-family: "Roboto", sans-serif;
     font-weight: normal;

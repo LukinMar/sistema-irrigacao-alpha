@@ -18,6 +18,7 @@
 
     <style>       
         
+        
         body {
           line-height: 30px;
           background: #2e4053;
@@ -114,16 +115,22 @@
         #contacts button[type="submit"] {
           cursor: pointer;
           width: 100%;
-          border: none;
-          background: #2e4053;
-          color: #FFF;
-          margin: 0 0 5px;
-          padding: 10px;
           font-size: 15px;
+          display: inline-block;
+          padding: 8px 30px;
+          border-radius: 50px;
+          color: #ffffff;
+          background-color: #2e4053;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          border: none;
+          -webkit-box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.2);
         }
 
         #contacts button[type="submit"]:hover {
-          background: #3f566e;
+          background: #fff;
+          color:#2e4053;
         }
 
         #contacts button[type="submit"]:active {
@@ -170,12 +177,15 @@
              <i class="material-icons">menu</i>
          </a>
     <ul class="right hide-on-med-and-down">
-             <li><a href="index.php">HOME</a></li>            
+             <li><a href="index.php">HOME</a></li>   
+             <li><a href="sobre.php">SOBRE</a></li>         
              <li><a href="login.php">LOGIN</a></li>
-
     </ul>
+
     <ul class="side-nav" id="menu-mobile">
               <li><a href="index.php"><i class="material-icons">home</i>HOME</a></li>
+             <hr>
+             <li><a href="sobre.php"><i class="material-icons">info</i>SOBRE</a></li>
              <hr>
              <li><a href="login.php"><i class="material-icons">person</i>LOGIN</a></li>
     </ul>
