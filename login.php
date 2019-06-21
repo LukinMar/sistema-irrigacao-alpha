@@ -108,12 +108,6 @@
                 <input type="email" placeholder="E-mail" name="e-mail" required/>
                 <button id="criar" name="cadastrar" type="submit">Criar</button>
                 <br>
-                <?php if(isset($_SESSION['user-exist'])): ?>
-                <p id="error"> USUÁRIO JÁ EXISTE! </p>
-                <?php endif; unset($_SESSION['user-exist']); ?>
-                <?php if(isset($_SESSION['error'])): ?>
-                <p id="error"> ERRO AO CADASTRAR! </p>
-                <?php endif; unset($_SESSION['error']); ?>
                 <p class="message">Já está registrado? <a href="#">Entre</a></p>
             </form>
             <form class="login-form" action="" method="post">
@@ -121,7 +115,12 @@
                 <input type="password" name="pass" placeholder="Senha"required/>
                 <button id="entrar" name="entrar" type="submit">Entrar</button>
                 <br>
-
+                <?php if(isset($_SESSION['user-exist'])): ?>
+                <p id="error"> USUÁRIO JÁ EXISTE! </p>
+                <?php endif; unset($_SESSION['user-exist']); ?>
+                <?php if(isset($_SESSION['error'])): ?>
+                <p id="error"> ERRO AO CADASTRAR! </p>
+                <?php endif; unset($_SESSION['error']); ?>
                 <?php if(isset($_SESSION['nao_autenticado'])): ?>
                 <p id="error"> USUÁRIO OU SENHA INCORRETOS! </p>
                 <?php endif; unset($_SESSION['nao_autenticado']); ?>
