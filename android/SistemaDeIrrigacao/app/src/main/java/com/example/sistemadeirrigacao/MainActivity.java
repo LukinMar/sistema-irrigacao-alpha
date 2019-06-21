@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 
             }
         });
-        webView.loadUrl("https://sistema-irrigacao-v1.000webhostapp.com/login.php");
+        webView.loadUrl("https://lukinmar.000webhostapp.com/login.php");
     }
 }
 
