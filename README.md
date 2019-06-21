@@ -52,8 +52,8 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 
 <ul>
 	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a></li>
-  <li type="square"><a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação </a></li>
+  <li type="square"><a href="https://lukinmarsolutions.000webhostapp.com/index.php"> Sistema de Irrigação </a></li>
 	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Download APP - Android </a></li>
 </ul>
 
-<p align="center"><a href="https://sistema-irrigacao-v1.000webhostapp.com/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
+<p align="center"><a href="https://lukinmarsolutions.000webhostapp.com/index.php/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
