@@ -23,10 +23,11 @@ WiFi: IEEE 802.11 – b/g/n.<br>
 
 <ul>
 	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> Documentação NodeMCU </a></li>
-  <li type="square"><a href="https://https://sistema-irrigacao-v1.000webhostapp.com/"> Sistema de Irrigação</a></li>
+  <li type="square"><a href="https://https://lukinmarsolutions.000webhostapp.com/"> Sistema de Irrigação</a></li>
 	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Baixar APP - Android </a></li>
 </ul>
-
+<h5 align='center'> Esquema Elétrico </h5>
+<p align="center"><img src="https://i.imgur.com/2DYVnzl.png" width="500" target="_blank" alt="esquema-eletrico"/></a></p>
 <hr> 
 
 Personal irrigation project for learning and solving a familiar problem using MySQL, PHP, JavaScript, JAVA and C ++
