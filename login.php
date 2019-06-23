@@ -199,7 +199,6 @@
     ?>
 
     <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <!--Plugin-JS-->
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/scrollUp.min.js"></script>
     <script src="assets/js/magnific-popup.min.js"></script>
