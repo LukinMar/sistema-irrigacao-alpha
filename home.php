@@ -73,6 +73,15 @@
 
 </style>
 <body>
+
+<div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
     
     <nav>
     <div class="nav-wrapper">
@@ -106,7 +115,16 @@
     </div>
  </nav>
 
-</body>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/scrollUp.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
  <script>
 
  $(function(){
@@ -114,4 +132,5 @@
  });
 
  </script>
+ </body>
 </html>
