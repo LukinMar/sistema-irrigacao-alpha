@@ -71,12 +71,12 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="refresh" content="60;url=grafico.php">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
-   google.charts.load('current', {'packages':['corechart']});
+   google.charts.load('current', {'packages':['corechart'], 'language':'pt-br'});
    google.charts.setOnLoadCallback(drawChart);
    function drawChart(){
     var data = new google.visualization.DataTable(<?php echo $jsonTable; ?>);
