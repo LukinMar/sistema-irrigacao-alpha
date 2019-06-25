@@ -3442,11 +3442,6 @@ table span.badge {
   }
 }
 
-@media only screen and (min-width: 993px) {
-  .container {
-    width: 70%;
-  }
-}
 
 .col .row {
   margin-left: -0.75rem;
@@ -9090,9 +9085,7 @@ input[type=range]::-ms-thumb {
        body{
         background-color: #E0E0E0;
       }
-      .loading{
-          
-      }
+
       nav .brandlogo {
     position: absolute;
     color: #fff;
@@ -9128,13 +9121,20 @@ input[type=range]::-ms-thumb {
         min-height: 250px;
       }
 
+      @media only screen and (max-width: 600px) {
+      .card{
+        min-height: auto;
+      }
+    }
+
       .activator {
         cursor: pointer;
       }
 
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 900px){
         .statistic {
           font-size: 5em;
+          margin-top: 45px !important;
         }
       }
 .spinner {
