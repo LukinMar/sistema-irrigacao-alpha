@@ -26,7 +26,7 @@
             <input  class="form-control" type ="text" name="data" placeholder="mês/ano">
             <div class="input-group-append">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            <button name="relatorio" class="button" onclick="window.open('gerarRelatorio.php',' ');"> <i class='fas fa-file-pdf'></i> &nbsp Relatório</button>
+            <button name="relatorio" type="button" class="button" onclick="window.open('gerarRelatorio.php',' ');"> <i class='fas fa-file-pdf'></i> &nbsp Relatório</button>
             <button class="button" type="button" onclick="location.href='home.php';"><i class="fas fa-backward"></i></button>
             </div>  
             </div>
