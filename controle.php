@@ -1,5 +1,6 @@
 
 <?php
+        include('validar-usuario.php');
         date_default_timezone_set('America/Sao_Paulo');
         $dataAtual = date('Y-m-d'); 
         $timestamp = strtotime($dataAtual);
@@ -20,11 +21,12 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e97cfc6afc.js"></script>
     <link rel="stylesheet" href="assets/css/materialize.css" />
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style>
 
-     .btn, .btn-large, .btn-small, .btn-flat {
+    .btn, .btn-large, .btn-small, .btn-flat {
     border: none;
     border-radius: 50px;
     display: inline-block;
@@ -39,28 +41,14 @@
         background: #fff;
         color:#2e4053;
 }
-     .voltar{   
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-     }
-    </style>
-   <!--<link rel="stylesheet" type href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"> -->
-   <!--
-  <script>              
-          	var rele_controle = function(status) {
-	        var xmlhttp = new XMLHttpRequest();
-	        var set_status = "http://192.168.1.125/?function=" + status;
-	        xmlhttp.open("GET", set_status);
-	        xmlhttp.send();
-	    };
 
-               // Registrar função de click no botão de lampada
-                 var btnLamp = document.getElementById('btn-lamp');
-                 btnLamp.onclick = function(){
-                    rele_controle("rele_on");
-                 });
-	</script>
--->
+.voltar{   
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+}
+
+    </style>
+
   </head>
   <body>
   <form method="GET" action="192.168.1.25">
@@ -96,27 +84,26 @@
     while ($linha = $stmt->fetch(PDO::FETCH_OBJ)){
       $timestamp = strtotime($linha->data);
 ?>
-      
-
-    
+ 
     <div class="container">
       <br/>
 
-      <!--    TEMPERATURA    -->
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
-              <span class="statistic"> <?php echo ($linha->temp*100/100); ?></span>
-              <span class="statistic">ºC</span>
+              <span class="statistic" id="celsius"> <?php echo ($linha->temp*100/100); ?> ºC</span>
+              <span class="statistic" id="fahrenheit" style="display:none"> <?php $fahrenheit = (($linha->temp*9/5) + 32); echo bcdiv($fahrenheit, 1, 1); ?> ºF</span>
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">Temperatura</span>
+              <span class="card-title activator grey-text text-darken-4">Temperatura
+              <i  class="fa fa-thermometer-half right" onClick="toggleTemperature();"></i>
+              <i  class="material-icons right">more_vert</i>
+              </span>
             </div>
           </div>
         </div>
 
-        <!-- UMIDADE RELATIVA DO AR -->
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
@@ -130,8 +117,7 @@
             </div>
           </div>
         </div>
-
-          <!-- UMIDADE DO SOLO -->          
+       
         <div class="col s12 m6">
           <div class="card">
             <div class="card-image center">
@@ -147,26 +133,27 @@
           </div>
         </div>     
 
-         <!-- ATIVAÇÃO RELE -->
         <div class="col s12 m6">
           <div class="card" style="padding-bottom:40px">
             <div class="card-image center">
-              <i id="currentLamp" class="material-icons statistic">flash_on</i>
+              <i id="currentRele" class="material-icons statistic">flash_on</i>
             </div>
             <div class="card-content">
               <span class="card-title grey-text text-darken-4">
                 Rega Manual
               </span>
-                <a class="waves-effect waves-light btn col s12" id="btn-lamp">
-                <i class="material-icons left">flash_on</i> Ativar
+                <a class="waves-effect waves-light btn col s12" id="btn-rele">
+                <i id="currentRele" class="material-icons left">flash_on</i> Ativar
               </a>
             </div>
           </div>
         </div>
                 <a class="waves-effect waves-light btn col s12" onclick="location.href='grafico.php'">
-                <i class="material-icons left">show_chart</i> Gráfico</a>
+                <i class="fas fa-chart-line left"></i> Gráfico</a>
+                
   </form>
 </body>
+<script src="assets/js/controle.js"></script>
 </html>
 
 <?php
