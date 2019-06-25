@@ -4,40 +4,32 @@
 }
 .container {
   margin: 0 auto;
-
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .form {
-  text-align: center;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.4em;
+  margin: 0 auto;
 }
-input {
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-}
-.buscar {
-  height: 43px;
-  width: 10px;
+
+.form- {
   text-align: center;
-  align-content: center;
-  border: 1px solid #000;
-  border-radius: 4px;
+  margin: 0 auto;
+  padding-top: 10px;
 }
 
 input[type="text"] {
-  line-height: 36px;
-  width: 60px;
   text-align: center;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-button,
-input[type="button"] {
+.button {
   border-radius: 50px;
   display: inline-block;
   line-height: 36px;
@@ -48,9 +40,17 @@ input[type="button"] {
   background: #3f566e;
   cursor: pointer;
   border-style: none;
+  flex-wrap: wrap;
 }
+
 button:hover,
 input[type="button"]:hover {
+  background: #fff;
+  color: #2e4053;
+  border-style: none;
+}
+
+.button:hover {
   background: #fff;
   color: #2e4053;
 }
@@ -60,14 +60,14 @@ p {
 }
 
 .table-box {
-  width: 100%;
   height: 800px;
-  overflow-y: scroll;
+  padding-top: 10px;
 }
 
 table {
   width: 100%;
   background: #fff;
+  margin: 0 auto;
 }
 
 table,
@@ -96,9 +96,6 @@ tr td:nth-child(1) {
   color: #fff;
 }
 
-::-webkit-scrollbar {
-}
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 10px #2e4053;
   border-radius: 10px;
@@ -115,7 +112,6 @@ tr td:nth-child(1) {
 .btn-small,
 .btn-flat {
   border-radius: 50px;
-  display: inline-block;
   line-height: 36px;
   padding: 0 16px;
   vertical-align: middle;
@@ -132,20 +128,46 @@ tr td:nth-child(1) {
   background: #fff;
   color: #2e4053;
 }
-.submit-lente {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  border: none;
-  background: transparent;
-  outline: none;
+
+.buscar-button:hover {
+  background: #fff;
+  color: #2e4053;
 }
 
-.submit-line {
-  width: 200px;
+.input-group > .custom-file,
+.input-group > .custom-select,
+.input-group > .form-control {
+  position: relative;
+  width: 30%;
+  margin-bottom: 0;
 }
 
-.submit-line input {
-  width: 100%;
+.input-group
+  > .input-group-append:last-child
+  > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.input-group-append {
+  display: -webkit-inline-box;
+}
+
+.input-group > .custom-file,
+.input-group > .custom-select,
+.input-group > .form-control {
+  position: relative;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: inherit;
+}
+
+.right {
+  float: right;
 }
