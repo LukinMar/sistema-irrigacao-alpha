@@ -98,7 +98,6 @@ font-weight: normal;
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4">Temperatura
               <i  class="fa fa-thermometer-half right" onClick="toggleTemperature();"></i>
-              <i  class="material-icons right">more_vert</i>
               </span>
             </div>
           </div>
