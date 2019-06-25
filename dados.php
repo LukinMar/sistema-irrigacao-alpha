@@ -1,3 +1,6 @@
+<?php
+    include('validar-usuario.php');
+?>
 <!DOCTYPE html>
 <html>
    <head>     
@@ -9,18 +12,20 @@
     <meta name="msapplication-TileColor" content="#2e4053">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e97cfc6afc.js"></script>
     <link rel="stylesheet" href="assets/css/dados.css"/>
     <meta charset="utf-8">
     <title>Banco de Dados</title>
     </head>
+
     <body class="body">
 <div class="container"> 
         <div class="form">
-            <form action="" method="POST"><br>
-            <input type ="text" name="data" placeholder="mês/ano">
-            <input type ="submit" name="submit" value ="Buscar">
-            <input type ="button" name="relatorio" value="Relatório"  onclick="window.open('gerarRelatorio.php',' ');">
-            <input type ="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
+            <form action="" method="POST">
+            <input  class="buscar-input" type ="text" name="data" placeholder="mês/ano">
+            <button type="submit" class="buscar-button" name="buscar"> <i class="fas fa-search"></i> &nbsp Buscar</button>
+            <button name="relatorio" onclick="window.open('gerarRelatorio.php',' ');"> <i class='fas fa-file-pdf'></i> &nbsp Relatório</button>
+            <input type="button" name="voltar" value="Voltar" onclick="location.href='home.php';">
         </form>
         </div>
     <div class="table-box">
