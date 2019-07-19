@@ -22,9 +22,13 @@ FLASH: QSPI Externo – de 512 kB até 4 MB.<br>
 WiFi: IEEE 802.11 – b/g/n.<br>
 
 <ul>
-	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> Documentação NodeMCU </a></li>
+  <li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> Documentação NodeMCU </a></li>
   <li type="square"><a href="https://https://lukinmarsolutions.000webhostapp.com/"> Sistema de Irrigação</a></li>
-	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Baixar APP - Android </a></li>
+  <li type="none"><ul>
+	<li type="none"> Usuário: root </li>
+	<li type="none"> Senha: 1234 </li>
+  </ul></li>
+  <li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Baixar APP - Android </a></li>
 </ul>
 <h5 align='center'> Esquema Elétrico </h5>
 <p align="center"><img src="https://i.imgur.com/2DYVnzl.png" width="500" target="_blank" alt="esquema-eletrico"/></a></p>
@@ -52,9 +56,13 @@ FLASH: QSPI – 512 kB - 4 MB.<br>
 WiFi: IEEE 802.11 – b/g/n.<br>
 
 <ul>
-	<li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a></li>
+  <li type="square"><a href="https://nodemcu.readthedocs.io/en/master/"> NodeMCU Documentation </a></li>
   <li type="square"><a href="https://lukinmarsolutions.000webhostapp.com/index.php"> Sistema de Irrigação </a></li>
-	<li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Download APP - Android </a></li>
+  <li type="none"><ul>
+	<li type="none"> User: root </li>
+	<li type="none"> Password: 1234 </li>
+  </ul></li>
+  <li type="square"><a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs"> Download APP - Android </a></li>
 </ul>
 
-<p align="center"><a href="https://lukinmarsolutions.000webhostapp.com/index.php/"><img src="https://i.imgur.com/SiaAzG1.png" width="350" target="_blank" alt="logo-sistemairrigacao"/></a></p>
+<p align="center"><a href="https://lukinmarsolutions.000webhostapp.com/index.php/"><img src="https://i.imgur.com/UWMyeA2.png" width="450" target="_blank" alt="logo-sistemairrigacao"/></a></p>
