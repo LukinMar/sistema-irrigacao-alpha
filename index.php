@@ -131,11 +131,11 @@
 	
 	<footer id="footer">
 		<div class="container">
-		<p>Desenvolvido por Lucas Martins</p>
+		<p>Desenvolvido por Lucas Martins - LukinMar</p>
 			<ul class="icons">
-				<li><a href="http://www.facebook.com/lukinmar" target="_blank" class="icon fa-facebook"></a></li>
-				<li><a href="http://www.twitter.com/lukinmar" target="_blank" class="icon fa-instagram"></a></li>
-				<li><a href="http://instagram.com/lukinmar" target="_blank" class="icon fa-github"></a></li>
+				<li><a href="https://www.facebook.com/lukinmar" target="_blank" class="icon fa-facebook"></a></li>
+				<li><a href="https://www.instagram.com/lukinmar" target="_blank" class="icon fa-instagram"></a></li>
+				<li><a href="https://github.com/LukinMar" target="_blank" class="icon fa-github"></a></li>
 			</u>			
 		</div>
 	</footer>
