@@ -190,7 +190,7 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="social-menu text-center">
-                            <p>Desenvolvido por Lucas Martins.</p>
+                            <p>Desenvolvido por Lucas Martins - LukinMar</p>
                     </div>
                      <ul class="social-menu text-center">                  
                             <li><a href="https://www.facebook.com/lukinmar " target="_blank" ><i class="ti-facebook"></i></a></li>
