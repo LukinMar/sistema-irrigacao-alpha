@@ -168,6 +168,19 @@
         nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
             display:inline;
         }
+
+        textarea:focus {
+        margin: 5px 1px 3px 0px;
+        box-shadow: 0 0 1px #2e4053;
+        border: 1px solid #2e4053 !important;
+      }
+
+      input:focus {
+        border-bottom: 1px solid #2e4053 !important;
+        box-shadow: 0 1px 0 0 #2e4053 !important;
+      }
+
+
 </style>
 <body>
 <nav>
