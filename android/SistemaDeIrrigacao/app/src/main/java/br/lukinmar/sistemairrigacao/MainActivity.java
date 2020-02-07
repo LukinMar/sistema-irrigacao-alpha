@@ -1,4 +1,4 @@
-package com.example.sistemadeirrigacao;
+package br.lukinmar.sistemairrigacao;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.app.DownloadManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
+
+import br.lukinmar.sistemadeirrigacao.R;
 
 
 public class MainActivity extends Activity {

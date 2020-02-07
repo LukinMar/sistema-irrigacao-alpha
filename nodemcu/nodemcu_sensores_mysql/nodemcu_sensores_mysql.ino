@@ -6,14 +6,14 @@
 #define DESLIGADO 0
 #define LIGADO 1
 #ifndef STASSID
-#define STASSID "LIVE TIM_5547_2G"
+#define STASSID "LukinMar"
 #define STAPSK  "10182126"
 #endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "192.168.1.3";
+const char* host = "lukinmarsolutions.000webhostapp.com";
 const uint16_t port = 80; 
 
 const int pino_dht = 14 ; // pino onde o sensor DHT está conectado
