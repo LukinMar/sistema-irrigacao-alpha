@@ -63,7 +63,7 @@
                 <div class="col-xs-12 col-md-7 header-text">
                     <h2>Sistema de Irrigação</h2>
                     <p>Projeto pessoal de irrigação automatizada para aprendizado e resolução de um problema familiar, usando PHP, JavaScript, JAVA, C++ e MySQL.</p>
-                   <a href="https://drive.google.com/open?id=1Vx8kYPCS5qCr1-6K050pVNb7uhBmNmfs" target="_blank" class="button white">Download APP <i class="material-icons left">file_download </i></a>
+                   <a href="https://play.google.com/store/apps/details?id=br.lukinmar.sistemadeirrigacao" target="_blank" class="button white">Download APP <i class="material-icons left">file_download </i></a>
                 </div>
                 <div class="hidden-xs hidden-sm col-md-5 text-right">
                     <div class="screen-box screen-slider">
