@@ -6,7 +6,7 @@
 #define DESLIGADO 0
 #define LIGADO 1
 #ifndef STASSID
-#define STASSID "AlbertoJR"
+#define STASSID "AlbertoJR "
 #define STAPSK  "10182126"
 #endif
 
