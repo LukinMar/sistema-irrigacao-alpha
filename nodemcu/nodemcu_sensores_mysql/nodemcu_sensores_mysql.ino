@@ -6,15 +6,15 @@
 #define DESLIGADO 0
 #define LIGADO 1
 #ifndef STASSID
-#define STASSID "LukinMar"
+#define STASSID "AlbertoJR"
 #define STAPSK  "10182126"
 #endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "lukinmarsolutions.000webhostapp.com";
-const uint16_t port = 80; 
+const char* host = "192.168.56.1";
+const uint16_t port = 8088; 
 
 const int pino_dht = 14 ; // pino onde o sensor DHT está conectado
 float temperatura; // variável para armazenar o valor de temperatura
@@ -206,14 +206,14 @@ void loop() {
   lcd.home(); // Seta o cursor para o inicio caracter 0, na linha 0
   delay(100);
 
-   String url = "/sistemairrigacao/salvar.php?";
-         url += "temp=";
-         url += temperatura;
-         url +="&ur=";
-         url += umidade;
-         url +="&us=";
-         url +=umidadeSolo;
-
+   String  url = "sistemadeirrigacao/salvar.php?temp=";
+           url += temperatura;
+           url +="&ur=";
+           url += umidade;
+           url +="&us=";
+           url +=umidadeSolo;
+           url +="&id_usuario=2";
+        
  Serial.print("Requisitando URL:");
  Serial.println(url);
   
@@ -222,15 +222,15 @@ void loop() {
     Serial.println("hello from ESP8266");
   }
   
- client.print (String("GET ") + url + " HTTP/1.1\r\n" +
-                "Host:   " + host + "\r\n" + 
-                "Connection: close\r\n\r\n");
 
+  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+               "Host: " + host + "\r\n" +
+               "Connection: close\r\n\r\n");
 
   // wait for data to be available
   unsigned long timeout = millis();
   while (client.available() == 0) {
-    if (millis() - timeout > 5000) {
+    if (millis() - timeout > 10000) {
       Serial.println(">>> Client Timeout !");
       client.stop();
       delay(60000);
