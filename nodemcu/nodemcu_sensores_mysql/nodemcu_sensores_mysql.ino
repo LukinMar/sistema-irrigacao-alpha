@@ -13,7 +13,7 @@
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "lukinmarsolutions.000webhostapp.com";
+const char* host = "www.lukinmarsolutions.000webhostapp.com";
 const uint16_t port = 80; 
 
 const int pino_dht = 14 ; // pino onde o sensor DHT está conectado
@@ -97,22 +97,8 @@ void loop() {
     /*******************************************************
    **************** CONEXAO E ENVIO****** *****************
    *******************************************************/
-   
-  Serial.print("Conectando a: ");
-  Serial.print(host);
-  Serial.print(':');
-  Serial.println(port);
 
-  // Use  class to create TCP connections
-  WiFiClient client;
-  if (!client.connect(host, port)) {
-    Serial.println("Falha na conexão");
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Falha na conexão");
-    delay(5000);
-    return;
-  }
+
     
     telaEspera();
   
@@ -205,52 +191,50 @@ void loop() {
         
   lcd.home(); // Seta o cursor para o inicio caracter 0, na linha 0
   delay(100);
+           
+  WiFiClient client;
+  // Use WiFiClient class to create TCP connection
+  if (!client.connect(host, port)) {
+    Serial.println("Falha na conexão");
+    delay(5000);
+    return;
+  }
 
-   String  url = "/salvar.php?temp=";
+ String url = "/salvar.php?";
+         url +="temp=";
            url += temperatura;
            url +="&ur=";
            url += umidade;
            url +="&us=";
            url +=umidadeSolo;
-           url +="&id_usuario=2";
-        
- Serial.print("Requisitando URL:");
- Serial.println(url);
-  
-  Serial.println("Enviando dados para o servidor");
-  if (client.connected()) {
-    Serial.println("hello from ESP8266");
-  }
-  
+           url +="&id_usuario=2&id_controlador=1";
+           
+           
+   Serial.print("Requisitando url");
+   Serial.println(url);
 
-  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
-               "Host: " + host + "\r\n" +
-               "Connection: close\r\n\r\n");
+client.print (String("GET ") + url + " HTTP/1.1\r\n" + 
+              "Host: " + host + "\r\n" + "Connection: close \r\n\r\n");
 
   // wait for data to be available
   unsigned long timeout = millis();
   while (client.available() == 0) {
-    if (millis() - timeout > 10000) {
+    if (millis() - timeout > 5000) {
       Serial.println(">>> Client Timeout !");
       client.stop();
-      delay(60000);
       return;
     }
   }
-
-  // Read all the lines of the reply from server and print them to Serial
-  Serial.println("Recebendo dados do servidor");
+  Serial.println("Recebendo dados do servidor remoto");
   // not testing 'client.connected()' since we do not need to send data here
   while (client.available()) {
-    String ch = client.readStringUntil('\r');
-   // Serial.print(ch);
-    if (ch.indexOf("Salvo com sucesso") != -1){
-      Serial.println();
-      Serial.println("Salvo com sucesso");
-    }
+    String line = client.readStringUntil ('\r');
+    Serial.print(line);
   }
+
   // Close the connection
-  Serial.println("Conexao fechada");
+  Serial.println();
+  Serial.println("Conexão fechada");
   client.stop();
 
   delay(10000); //
