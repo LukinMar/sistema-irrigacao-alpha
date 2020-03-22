@@ -13,8 +13,8 @@
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "www.lukinmarsolutions.000webhostapp.com";
-const uint16_t port = 80; 
+const char* host = "192.168.0.30";
+const uint16_t port = 8088; 
 
 const int pino_dht = 14 ; // pino onde o sensor DHT está conectado
 float temperatura; // variável para armazenar o valor de temperatura
@@ -200,7 +200,7 @@ void loop() {
     return;
   }
 
- String url = "/salvar.php?";
+ String url = "sistemadeirrigacao/salvar.php?";
          url +="temp=";
            url += temperatura;
            url +="&ur=";
